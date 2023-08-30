@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $dark;
+  color: $white;
+  font-family: $font-family-regular;
+}
+a {
+  color: $white;
+}
+.container {
+  padding: 0 0;
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 38px;
+}

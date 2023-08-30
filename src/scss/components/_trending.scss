@@ -1,0 +1,51 @@
+.trending {
+  padding: 80px 0;
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__desc {
+    margin-bottom: 60px;
+    font-size: $font-size-large;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  &__gallery {
+    display: grid;
+    grid-template: 1fr 100px / repeat(3, 1fr);
+    gap: 13px;
+    margin-bottom: 15px;
+    & > * {
+      border-radius: $border-radius;
+      &:first-child {
+        grid-column: 1 / span 3;
+      }
+      &:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 20px;
+        font-family: 'Space Mono Bold';
+        background-color: $purple;
+      }
+    }
+  }
+  &__name {
+    font-size: $font-size-large;
+    margin-bottom: 10px;
+  }
+  &__artist {
+    display: flex;
+    align-items: center;
+    & .avatar {
+      width: 24px;
+      border-radius: 125px;
+    }
+    & .author {
+      margin-left: 12px;
+    }
+  }
+}

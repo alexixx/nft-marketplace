@@ -1,0 +1,35 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 152px;
+  padding: 19px 30px;
+  font-weight: 600;
+  border: 2px solid $purple;
+  border-radius: $border-radius;
+  &--color {
+    &--purple {
+      color: $white;
+      background-color: $purple;
+    }
+    &--white {
+      color: $dark;
+      background-color: $white;
+    }
+    &--transparent {
+      color: $purple;
+      color: $purple;
+    }
+  }
+  &--size {
+    &--small {
+      padding: 19px 30px;
+    }
+    &--medium {
+      padding: 19px 50px;
+    }
+  }
+  & .icon {
+    margin-right: 16px;
+  }
+}
