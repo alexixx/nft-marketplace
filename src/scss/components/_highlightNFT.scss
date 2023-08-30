@@ -1,0 +1,73 @@
+.highlight-nft {
+  z-index: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 640px;
+  padding: 60px 0;
+  background-image: url('../../assets/img/content/home/mashroom.png');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  &__gradient {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, #a259ff, transparent);
+  }
+  &__wrapper {
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  &__artist {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border-radius: $border-radius;
+    background-color: $dark-light;
+  }
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 125px;
+  }
+  &__author {
+    margin-left: 12px;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-size: 51px;
+    font-weight: 600;
+  }
+  &__timer {
+    padding: 30px;
+    font-family: 'Space Mono';
+    font-size: $font-size-small;
+    border-radius: $border-radius;
+    background: rgba($color: #3b3b3b, $alpha: 0.5);
+  }
+  &__figures {
+    position: relative;
+    font-family: 'Space Mono Bold';
+    font-size: 38px;
+  }
+  &__grid {
+    display: grid;
+    grid-template: 1fr auto / auto auto auto auto auto;
+    //  column-gap: 38px;
+    column-gap: 10px;
+    margin-top: 10px;
+  }
+  & > .container {
+    flex: 1;
+  }
+}

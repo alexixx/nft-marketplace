@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Trending from '../components/Trending';
 import TopCreators from '../components/TopCreators';
-import Categories from '../components/Categories';
+import TopCategories from '../components/TopCategories';
 import MoreNFT from '../components/MoreNFT';
 import HighlightNFT from '../components/HighlightNFT';
 import HowItWorks from '../components/HowItWorks';
@@ -20,7 +20,10 @@ const Home = () => {
           <Hero />
           <Trending />
           <TopCreators />
+          <TopCategories />
+          <MoreNFT />
         </div>
+        <HighlightNFT />
       </main>
     </>
   );

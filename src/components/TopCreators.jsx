@@ -87,6 +87,42 @@ const TopCreators = () => {
           </div>
           <div className="top-creators__number">1</div>
         </div>
+        <div className="top-creators__card">
+          <img src={authorImg} alt="" className="top-creators__avatar" />
+          <p className="top-creators__author">Keepitreal</p>
+          <div className="top-creators__info">
+            <p>Total Sales:</p>
+            <div className="top-creators__sales">34.53 ETH</div>
+          </div>
+          <div className="top-creators__number">1</div>
+        </div>
+        <div className="top-creators__card">
+          <img src={authorImg} alt="" className="top-creators__avatar" />
+          <p className="top-creators__author">Keepitreal</p>
+          <div className="top-creators__info">
+            <p>Total Sales:</p>
+            <div className="top-creators__sales">34.53 ETH</div>
+          </div>
+          <div className="top-creators__number">1</div>
+        </div>
+        <div className="top-creators__card">
+          <img src={authorImg} alt="" className="top-creators__avatar" />
+          <p className="top-creators__author">Keepitreal</p>
+          <div className="top-creators__info">
+            <p>Total Sales:</p>
+            <div className="top-creators__sales">34.53 ETH</div>
+          </div>
+          <div className="top-creators__number">1</div>
+        </div>
+        <div className="top-creators__card">
+          <img src={authorImg} alt="" className="top-creators__avatar" />
+          <p className="top-creators__author">Keepitreal</p>
+          <div className="top-creators__info">
+            <p>Total Sales:</p>
+            <div className="top-creators__sales">34.53 ETH</div>
+          </div>
+          <div className="top-creators__number">1</div>
+        </div>
       </div>
     </section>
   );

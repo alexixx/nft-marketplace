@@ -1,0 +1,61 @@
+.more-nft {
+  padding: 80px 0;
+  &__desc {
+    margin-top: 10px;
+    font-size: $font-size-large;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius;
+    overflow: hidden;
+  }
+  &__info {
+    padding: 20px 30px;
+    background-color: $dark-light;
+  }
+  &__artist {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-family: 'Space Mono';
+  }
+  &__name {
+    font-size: $font-size-large;
+  }
+  &__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 125px;
+  }
+  &__author {
+    margin-left: 12px;
+  }
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Space Mono';
+      &:first-child {
+        align-items: flex-start;
+      }
+      &:last-child {
+        align-items: flex-end;
+      }
+    }
+    & .title {
+      color: $grey;
+      font-size: $font-size-small;
+      margin-bottom: 8px;
+    }
+  }
+}
