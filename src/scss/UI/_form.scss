@@ -1,0 +1,20 @@
+.form {
+  &--subscribe {
+    position: relative;
+    & label > input {
+      width: 100%;
+      padding: 19px 20px;
+      padding-right: 52%;
+      color: $dark;
+      border-radius: $border-radius;
+      background-color: $white;
+    }
+    & button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+}

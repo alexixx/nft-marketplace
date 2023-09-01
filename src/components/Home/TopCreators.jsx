@@ -1,8 +1,8 @@
 import React from 'react';
 
-import rocketImg from '../assets/img/icons/rocket__purple.svg';
-import authorImg from '../assets/img/content/home/author.png';
-import Button from '../UI/Button';
+import rocketImg from '../../assets/img/icons/rocket__purple.svg';
+import authorImg from '../../assets/img/content/home/author.png';
+import Button from '../../UI/Button';
 
 const TopCreators = () => {
   return (

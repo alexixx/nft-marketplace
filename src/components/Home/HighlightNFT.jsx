@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Button from '../UI/Button';
-import eyeImg from '../assets/img/icons/eye.svg';
-import authorImg from '../assets/img/content/home/author.png';
+import Button from '../../UI/Button';
+import eyeImg from '../../assets/img/icons/eye.svg';
+import authorImg from '../../assets/img/content/home/author.png';
 
 const HighlightNFT = () => {
   return (

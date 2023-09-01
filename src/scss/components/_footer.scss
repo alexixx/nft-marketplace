@@ -1,0 +1,41 @@
+.footer {
+  background-color: $dark-light;
+  &__wrapper {
+    display: grid;
+    column-gap: 50px;
+    grid-template: 1fr 40px / 2fr 1fr 3fr;
+    padding: 40px 0;
+  }
+  &__title {
+    margin-bottom: 25px;
+    font-size: $font-size-large;
+    font-family: 'Space Mono Bold';
+    & > img {
+      margin-right: 12px;
+    }
+  }
+  & p {
+    margin-bottom: 20px;
+    color: $grey;
+    line-height: 22.4px;
+  }
+  &__social {
+    margin-top: 15px;
+    & > a {
+      margin-right: 12px;
+    }
+  }
+  &__link {
+    display: block;
+    margin-bottom: 20px;
+    color: $grey;
+  }
+  &__copyright {
+    grid-column: 1 / span 3;
+    margin-top: 30px;
+    padding-top: 20px;
+    color: $grey;
+    font-size: $font-size-small;
+    border-top: 1px solid $grey;
+  }
+}

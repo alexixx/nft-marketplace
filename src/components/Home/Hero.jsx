@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Button from '../UI/Button';
-import rocketImg from '../assets/img/icons/rocket__white.svg';
-import heroImg from '../assets/img/content/home/hero.png';
-import authorImg from '../assets/img/content/home/author.png';
+import Button from '../../UI/Button';
+import rocketImg from '../../assets/img/icons/rocket__white.svg';
+import heroImg from '../../assets/img/content/home/hero.png';
+import authorImg from '../../assets/img/content/home/author.png';
 
 const Hero = () => {
   return (

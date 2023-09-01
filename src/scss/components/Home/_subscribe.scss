@@ -1,0 +1,25 @@
+.subscribe {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: $dark-light;
+    border-radius: $border-radius;
+  }
+  &__image {
+    margin-right: 80px;
+  }
+  &__title {
+    line-height: 45.6px;
+  }
+  &__desc {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: $font-size-large;
+    line-height: 35.2px;
+    text-transform: capitalize;
+  }
+}

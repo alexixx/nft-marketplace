@@ -1,20 +1,17 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import Trending from '../components/Trending';
-import TopCreators from '../components/TopCreators';
-import TopCategories from '../components/TopCategories';
-import MoreNFT from '../components/MoreNFT';
-import HighlightNFT from '../components/HighlightNFT';
-import HowItWorks from '../components/HowItWorks';
-import Subscribe from '../components/Subscribe';
-import Footer from '../components/Footer';
+import Hero from '../components/Home/Hero';
+import Trending from '../components/Home/Trending';
+import TopCreators from '../components/Home/TopCreators';
+import TopCategories from '../components/Home/TopCategories';
+import MoreNFT from '../components/Home/MoreNFT';
+import HighlightNFT from '../components/Home/HighlightNFT';
+import HowItWorks from '../components/Home/HowItWorks';
+import Subscribe from '../components/Home/Subscribe';
 
 const Home = () => {
   return (
     <>
-      <Header />
       <main>
         <div className="container">
           <Hero />
@@ -24,6 +21,10 @@ const Home = () => {
           <MoreNFT />
         </div>
         <HighlightNFT />
+        <div className="container">
+          <HowItWorks />
+          <Subscribe />
+        </div>
       </main>
     </>
   );

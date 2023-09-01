@@ -1,9 +1,9 @@
 import React from 'react';
-import eyeImg from '../assets/img/icons/eye.svg';
-import discoverImg from '../assets/img/content/home/discover.png';
-import authorImg from '../assets/img/content/home/author.png';
+import eyeImg from '../../assets/img/icons/eye.svg';
+import discoverImg from '../../assets/img/content/home/discover.png';
+import authorImg from '../../assets/img/content/home/author.png';
 
-import Button from '../UI/Button';
+import Button from '../../UI/Button';
 
 const MoreNFT = () => {
   return (

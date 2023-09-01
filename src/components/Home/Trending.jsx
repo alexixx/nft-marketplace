@@ -1,7 +1,7 @@
 import React from 'react';
 
-import trendingBigImg from '../assets/img/content/home/trending_big_1.png';
-import authorImg from '../assets/img/content/home/author.png';
+import trendingBigImg from '../../assets/img/content/home/trending_big_1.png';
+import authorImg from '../../assets/img/content/home/author.png';
 
 const Trending = () => {
   return (
