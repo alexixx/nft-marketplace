@@ -1,0 +1,13 @@
+.browse {
+  padding: 80px 0;
+  border-bottom: 1px solid $dark-light;
+  &__title {
+    font-size: 51px;
+    font-weight: 600;
+  }
+  &__desc {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: $font-size-large;
+  }
+}

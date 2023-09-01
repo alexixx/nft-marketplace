@@ -1,0 +1,31 @@
+.tabs {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 14px;
+    width: 100%;
+
+    font-size: $font-size-large;
+    &.active {
+      border-bottom: 2px solid $grey;
+      & .tabs__counter {
+        background-color: $grey;
+      }
+    }
+  }
+  &__counter {
+    padding: 5px 10px;
+    margin-left: 16px;
+    font-family: 'Space Mono';
+    font-size: $font-size-medium;
+    border-radius: $border-radius;
+    background-color: $dark-light;
+  }
+}

@@ -1,0 +1,25 @@
+.searcher {
+  position: relative;
+  & label {
+    position: absolute;
+    height: 100%;
+    width: 30px;
+    right: 0;
+    &::after {
+      content: url('../../assets/img/icons/search.svg');
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: max-content;
+      right: 20px;
+      margin: auto;
+    }
+  }
+  & > input {
+    width: 100%;
+    padding: 19px 20px;
+    padding-right: 60px;
+    border: 1px solid $dark-light;
+    border-radius: $border-radius;
+  }
+}
