@@ -8,6 +8,9 @@ import Footer from './components/Footer.jsx';
 
 import Home from './pages/Home';
 import Marketplace from './pages/Marketplace';
+import Rankings from './pages/Rankings';
+import Wallet from './pages/Wallet';
+import SignUp from './pages/SignUp';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -17,6 +20,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/marketplace" element={<Marketplace />} />
+        <Route path="/rankings" element={<Rankings />} />
+        <Route path="/wallet" element={<Wallet />} />
+        <Route path="/user/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

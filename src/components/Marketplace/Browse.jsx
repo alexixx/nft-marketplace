@@ -17,7 +17,21 @@ const Browse = () => {
         </div>
       </section>
       <div className="container">
-        <Tabs />
+        <Tabs
+          values={[
+            {
+              id: 0,
+              title: 'NFTs',
+              counter: 302,
+            },
+            {
+              id: 1,
+              title: 'Collections',
+              counter: 67,
+            },
+          ]}
+          activeTabDefault={0}
+        />
       </div>
     </>
   );

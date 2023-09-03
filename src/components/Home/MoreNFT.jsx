@@ -4,6 +4,7 @@ import discoverImg from '../../assets/img/content/home/discover.png';
 import authorImg from '../../assets/img/content/home/author.png';
 
 import Button from '../../UI/Button';
+import CardNFT from '../../UI/CardNFT';
 
 const MoreNFT = () => {
   return (
@@ -17,66 +18,30 @@ const MoreNFT = () => {
       </div>
 
       <div className="more-nft__list">
-        <div className="more-nft__card">
-          <img src={discoverImg} alt="discover" className="more-nft__image" />
-          <div className="more-nft__info">
-            <p className="more-nft__name">Distant Galaxy</p>
-            <div className="more-nft__artist">
-              <img src={authorImg} alt="author" className="more-nft__avatar" />
-              <p className="more-nft__author">MoonDancer</p>
-            </div>
-            <div className="more-nft__meta">
-              <div>
-                <p className="title">Price</p>
-                <p className="value">1.63 ETH</p>
-              </div>
-              <div>
-                <p className="title">Highest Bid</p>
-                <p className="value">0.33 wETH</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="more-nft__card">
-          <img src={discoverImg} alt="discover" className="more-nft__image" />
-          <div className="more-nft__info">
-            <p className="more-nft__name">Distant Galaxy</p>
-            <div className="more-nft__artist">
-              <img src={authorImg} alt="author" className="more-nft__avatar" />
-              <p className="more-nft__author">MoonDancer</p>
-            </div>
-            <div className="more-nft__meta">
-              <div>
-                <p className="title">Price</p>
-                <p className="value">1.63 ETH</p>
-              </div>
-              <div>
-                <p className="title">Highest Bid</p>
-                <p className="value">0.33 wETH</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="more-nft__card">
-          <img src={discoverImg} alt="discover" className="more-nft__image" />
-          <div className="more-nft__info">
-            <p className="more-nft__name">Distant Galaxy</p>
-            <div className="more-nft__artist">
-              <img src={authorImg} alt="author" className="more-nft__avatar" />
-              <p className="more-nft__author">MoonDancer</p>
-            </div>
-            <div className="more-nft__meta">
-              <div>
-                <p className="title">Price</p>
-                <p className="value">1.63 ETH</p>
-              </div>
-              <div>
-                <p className="title">Highest Bid</p>
-                <p className="value">0.33 wETH</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CardNFT
+          title="Distant Galaxy"
+          author="MoonDancer"
+          price="1.63"
+          highestBid="0.33"
+          imgCard={discoverImg}
+          imgAuthor={authorImg}
+        />
+        <CardNFT
+          title="Distant Galaxy"
+          author="MoonDancer"
+          price="1.63"
+          highestBid="0.33"
+          imgCard={discoverImg}
+          imgAuthor={authorImg}
+        />
+        <CardNFT
+          title="Distant Galaxy"
+          author="MoonDancer"
+          price="1.63"
+          highestBid="0.33"
+          imgCard={discoverImg}
+          imgAuthor={authorImg}
+        />
       </div>
     </section>
   );

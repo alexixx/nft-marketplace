@@ -1,0 +1,10 @@
+.rankings {
+  padding: 80px 0;
+  &__title {
+    font-size: 51px;
+  }
+  &__desc {
+    margin-top: 25px;
+    font-size: $font-size-large;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import subscribeImg from '../../assets/img/content/home/subscribe.png';
-import FormSubscribe from '../../UI/Form/FormSubscribe';
+import FormSubscribe from '../../UI/Form/Subscribe';
 
 const Subscribe = () => {
   return (

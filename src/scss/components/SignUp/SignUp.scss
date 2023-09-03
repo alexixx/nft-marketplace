@@ -1,0 +1,17 @@
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  &__title {
+    font-size: 51px;
+  }
+  &__desc {
+    max-width: 460px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    font-size: $font-size-large;
+    line-height: 35.2px;
+  }
+}

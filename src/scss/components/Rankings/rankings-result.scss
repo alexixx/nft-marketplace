@@ -1,0 +1,49 @@
+.rankings-result {
+  margin: 40px 0;
+  &__list {
+    display: grid;
+    grid-template: 46px repeat(auto-fill, 84px) / 1fr;
+    gap: 20px;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 5% 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 12px 20px;
+    font-family: 'Space Mono';
+    border-radius: $border-radius;
+    background-color: $dark-light;
+    & > .number {
+      & > span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        color: $grey;
+        border-radius: 30px;
+        background-color: $dark;
+      }
+    }
+    & > .artist {
+      display: flex;
+      align-items: center;
+      font-family: 'Work Sans';
+      font-size: $font-size-large;
+      & > img {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        border-radius: 60px;
+      }
+    }
+    & > .change {
+      color: $green;
+    }
+    &--title {
+      color: $grey;
+      border: 1px solid $dark-light;
+      background-color: $dark;
+    }
+  }
+}

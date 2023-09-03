@@ -11,9 +11,14 @@
     padding-top: 24px;
     padding-bottom: 14px;
     width: 100%;
+    user-select: none;
 
+    color: $grey;
     font-size: $font-size-large;
+
+    border-bottom: 2px solid transparent;
     &.active {
+      color: $white;
       border-bottom: 2px solid $grey;
       & .tabs__counter {
         background-color: $grey;
@@ -23,6 +28,7 @@
   &__counter {
     padding: 5px 10px;
     margin-left: 16px;
+    color: $white;
     font-family: 'Space Mono';
     font-size: $font-size-medium;
     border-radius: $border-radius;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import logoMinIcon from '../assets/img/icons/logo_min.svg';
-import FormSubscribe from '../UI/Form/FormSubscribe';
+import FormSubscribe from '../UI/Form/Subscribe';
 
 // SOCIAL ICONS
 import discordIcon from '../assets/img/icons/discord.svg';

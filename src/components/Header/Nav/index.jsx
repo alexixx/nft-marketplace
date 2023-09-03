@@ -6,8 +6,9 @@ import Button from '../../../UI/Button';
 import userImg from '../../../assets/img/icons/user.svg';
 
 const Nav = () => {
+  const navigate = useNavigate();
   const onClickButton = () => {
-    console.log('click');
+    navigate('/user/signup');
   };
   return (
     <nav className={style.nav}>
