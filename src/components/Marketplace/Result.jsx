@@ -7,10 +7,10 @@ import CardNFT from '../../UI/CardNFT';
 
 const Result = () => {
   return (
-    <section className="result">
+    <section className="browse-result">
       <div className="container">
-        <div className="result__wrapper">
-          <div className="result__list">
+        <div className="browse-result__wrapper">
+          <div className="browse-result__list">
             <CardNFT
               title="Magic Mushroom 0325"
               author="Shroomie"
