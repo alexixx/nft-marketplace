@@ -4,7 +4,9 @@
   align-items: center;
   min-width: 152px;
   padding: 19px 30px;
+  font-family: 'Work Sans';
   font-weight: 600;
+  font-size: $font-size-medium;
   border: 2px solid $purple;
   border-radius: $border-radius;
   &--color {
@@ -28,6 +30,9 @@
     }
     &--medium {
       padding: 19px 50px;
+    }
+    &--fill {
+      width: 100%;
     }
   }
   & .icon {

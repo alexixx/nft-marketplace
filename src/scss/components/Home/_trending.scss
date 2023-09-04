@@ -1,10 +1,11 @@
 .trending {
   padding: 80px 0;
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   &__desc {
     margin-bottom: 60px;
+    text-transform: capitalize;
     font-size: $font-size-large;
   }
   &__list {
@@ -28,7 +29,8 @@
         align-items: center;
         color: $white;
         font-size: 20px;
-        font-family: 'Space Mono Bold';
+        font-family: 'Space Mono';
+        font-weight: 600;
         background-color: $purple;
       }
     }

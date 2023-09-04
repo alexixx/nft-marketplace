@@ -10,12 +10,14 @@
   }
   &__title {
     margin-bottom: 20px;
+    text-transform: capitalize;
     font-size: 67px;
     line-height: 73.7px;
     font-weight: 600;
   }
   &__desc {
     margin-bottom: 30px;
+    text-transform: capitalize;
     font-size: $font-size-large;
     line-height: 35.2px;
   }

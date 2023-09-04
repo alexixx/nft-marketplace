@@ -2,6 +2,7 @@
   display: flex;
   &--row {
     justify-content: space-between;
+    align-items: flex-end;
   }
   &--column {
     flex-direction: column;

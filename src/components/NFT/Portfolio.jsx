@@ -1,16 +1,23 @@
 import React from 'react';
+import Button from '../../UI/Button';
+import CardNFT from '../../UI/CardNFT';
 
+import arrowIcon from '../../assets/img/icons/arrow_purple.svg';
 import discoverImg from '../../assets/img/content/home/discover.png';
 import authorImg from '../../assets/img/content/home/author.png';
 
-import CardNFT from '../../UI/CardNFT';
-
-const Result = () => {
+const Portfolio = () => {
   return (
-    <section className="browse-result">
+    <section className="nft-portfolio">
       <div className="container">
-        <div className="browse-result__wrapper">
-          <div className="browse-result__list">
+        <div className="nft-portfolio__wrapper">
+          <div class="wrapper wrapper--row">
+            <div class="wrapper wrapper--column">
+              <h2 class="nft-portfolio__title">More from this artist</h2>
+            </div>
+            <Button value="Go To Artist Page" icon={arrowIcon} size="medium" />
+          </div>
+          <div className="nft-portfolio__list">
             <CardNFT
               title="Magic Mushroom 0325"
               author="Shroomie"
@@ -18,7 +25,7 @@ const Result = () => {
               highestBid="0.33"
               imgCard={discoverImg}
               imgAuthor={authorImg}
-              theme="dark"
+              theme="light"
             />
             <CardNFT
               title="Magic Mushroom 0325"
@@ -27,7 +34,7 @@ const Result = () => {
               highestBid="0.33"
               imgCard={discoverImg}
               imgAuthor={authorImg}
-              theme="dark"
+              theme="light"
             />
             <CardNFT
               title="Magic Mushroom 0325"
@@ -36,7 +43,7 @@ const Result = () => {
               highestBid="0.33"
               imgCard={discoverImg}
               imgAuthor={authorImg}
-              theme="dark"
+              theme="light"
             />
             <CardNFT
               title="Magic Mushroom 0325"
@@ -45,7 +52,7 @@ const Result = () => {
               highestBid="0.33"
               imgCard={discoverImg}
               imgAuthor={authorImg}
-              theme="dark"
+              theme="light"
             />
             <CardNFT
               title="Magic Mushroom 0325"
@@ -54,7 +61,7 @@ const Result = () => {
               highestBid="0.33"
               imgCard={discoverImg}
               imgAuthor={authorImg}
-              theme="dark"
+              theme="light"
             />
             <CardNFT
               title="Magic Mushroom 0325"
@@ -63,7 +70,7 @@ const Result = () => {
               highestBid="0.33"
               imgCard={discoverImg}
               imgAuthor={authorImg}
-              theme="dark"
+              theme="light"
             />
           </div>
         </div>
@@ -72,4 +79,4 @@ const Result = () => {
   );
 };
 
-export default Result;
+export default Portfolio;

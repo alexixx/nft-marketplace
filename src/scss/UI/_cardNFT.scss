@@ -10,10 +10,11 @@
   &__artist {
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 10px;
     font-family: 'Space Mono';
   }
   &__name {
+    font-weight: 600;
     font-size: $font-size-large;
   }
   &__avatar {
@@ -51,9 +52,14 @@
 
 .card {
   &.theme {
-    &--black {
+    &--dark {
       & .card__info {
         background-color: $dark;
+      }
+    }
+    &--light {
+      & .card__info {
+        background-color: $dark-light;
       }
     }
   }

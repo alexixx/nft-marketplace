@@ -48,25 +48,6 @@
     font-size: 51px;
     font-weight: 600;
   }
-  &__timer {
-    padding: 30px;
-    font-family: 'Space Mono';
-    font-size: $font-size-small;
-    border-radius: $border-radius;
-    background: rgba($color: #3b3b3b, $alpha: 0.5);
-  }
-  &__figures {
-    position: relative;
-    font-family: 'Space Mono Bold';
-    font-size: 38px;
-  }
-  &__grid {
-    display: grid;
-    grid-template: 1fr auto / auto auto auto auto auto;
-    //  column-gap: 38px;
-    column-gap: 10px;
-    margin-top: 10px;
-  }
   & > .container {
     flex: 1;
   }

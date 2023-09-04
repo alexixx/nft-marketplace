@@ -12,6 +12,7 @@ import Rankings from './pages/Rankings';
 import Wallet from './pages/Wallet';
 import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
+import NFT from './pages/NFT';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/user/signup" element={<SignUp />} />
+        <Route path="/nft" element={<NFT />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

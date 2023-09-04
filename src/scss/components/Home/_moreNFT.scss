@@ -1,8 +1,12 @@
 .more-nft {
   padding: 80px 0;
+  &__title {
+    margin-bottom: 20px;
+  }
   &__desc {
     margin-top: 10px;
     font-size: $font-size-large;
+    text-transform: capitalize;
   }
   &__list {
     display: grid;

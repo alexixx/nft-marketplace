@@ -1,7 +1,11 @@
 .how-it-works {
   padding: 80px 0;
+  &__title {
+    margin-bottom: 20px;
+  }
   &__desc {
-    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: $font-size-large;
   }
   &__list {
     display: grid;

@@ -8,7 +8,7 @@ const Rankings = () => {
       <section className="rankings">
         <h2 className="rankings__title">Top Creators</h2>
         <div className="rankings__desc">
-          Check out top ranking NFT artists on the NFT Marketplace.s
+          Check out top ranking NFT artists on the NFT Marketplace.
         </div>
       </section>
       <Tabs

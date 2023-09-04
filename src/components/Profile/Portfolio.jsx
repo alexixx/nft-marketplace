@@ -17,7 +17,7 @@ const Portfolio = () => {
             highestBid="0.33"
             imgCard={discoverImg}
             imgAuthor={authorImg}
-            theme="black"
+            theme="dark"
           />
           <CardNFT
             title="Magic Mushroom 0325"
@@ -26,7 +26,7 @@ const Portfolio = () => {
             highestBid="0.33"
             imgCard={discoverImg}
             imgAuthor={authorImg}
-            theme="black"
+            theme="dark"
           />
           <CardNFT
             title="Magic Mushroom 0325"
@@ -35,7 +35,7 @@ const Portfolio = () => {
             highestBid="0.33"
             imgCard={discoverImg}
             imgAuthor={authorImg}
-            theme="black"
+            theme="dark"
           />
           <CardNFT
             title="Magic Mushroom 0325"
@@ -44,7 +44,7 @@ const Portfolio = () => {
             highestBid="0.33"
             imgCard={discoverImg}
             imgAuthor={authorImg}
-            theme="black"
+            theme="dark"
           />
           <CardNFT
             title="Magic Mushroom 0325"
@@ -53,7 +53,7 @@ const Portfolio = () => {
             highestBid="0.33"
             imgCard={discoverImg}
             imgAuthor={authorImg}
-            theme="black"
+            theme="dark"
           />
           <CardNFT
             title="Magic Mushroom 0325"
@@ -62,7 +62,7 @@ const Portfolio = () => {
             highestBid="0.33"
             imgCard={discoverImg}
             imgAuthor={authorImg}
-            theme="black"
+            theme="dark"
           />
         </div>
       </div>

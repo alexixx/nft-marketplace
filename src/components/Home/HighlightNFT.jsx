@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from '../../UI/Button';
+import Timer from '../../UI/Timer';
 import eyeImg from '../../assets/img/icons/eye.svg';
 import authorImg from '../../assets/img/content/home/author.png';
 
@@ -15,24 +16,10 @@ const HighlightNFT = () => {
               <p className="highlight-nft__author">Shroomie</p>
             </div>
             <div className="highlight-nft__title">Magic Mashrooms</div>
-            <Button color="white" value="See NFT" icon={eyeImg} />
+            <Button color="white" value="See NFT" icon={eyeImg} size="medium" />
           </div>
           <div className="highlight-nft__column">
-            <div className="highlight-nft__timer">
-              <p>Auction ends in:</p>
-              <div className="highlight-nft__grid">
-                <div className="highlight-nft__figures">59</div>
-                <div className="highlight-nft__figures">:</div>
-                <div className="highlight-nft__figures">59</div>
-                <div className="highlight-nft__figures">:</div>
-                <div className="highlight-nft__figures">59</div>
-                <div>Hours</div>
-                <div></div>
-                <div>Minutes</div>
-                <div></div>
-                <div>Seconds</div>
-              </div>
-            </div>
+            <Timer />
           </div>
         </div>
       </div>

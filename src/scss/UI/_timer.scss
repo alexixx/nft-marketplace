@@ -1,0 +1,38 @@
+.timer {
+  padding: 30px;
+  font-family: 'Space Mono';
+  font-size: $font-size-small;
+  border-radius: $border-radius;
+  background: rgba($color: #3b3b3b, $alpha: 0.5);
+  &__figures {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Space Mono Bold';
+    font-size: 38px;
+    &:nth-child(2),
+    &:nth-child(4) {
+      font-size: 28px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template: 1fr auto / auto auto auto auto auto;
+    //  column-gap: 38px;
+    column-gap: 10px;
+    margin-top: 10px;
+  }
+  & > .container {
+    flex: 1;
+  }
+}
+
+// THEME
+
+.timer {
+  &.theme {
+    &--light {
+      background-color: $dark-light;
+    }
+  }
+}
