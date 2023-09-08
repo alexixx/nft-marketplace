@@ -14,9 +14,15 @@ a {
   padding: 0 0;
   max-width: $container-width;
   margin: 0 auto;
+  @include mediaLaptop {
+    padding: 0 25px;
+  }
 }
 
 h2 {
   font-size: 38px;
   text-transform: capitalize;
+}
+.logo {
+  //   flex-shrink: 1;
 }

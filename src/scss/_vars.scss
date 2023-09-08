@@ -1,3 +1,8 @@
+$screen-mobile-s: 342px;
+$screen-mobile: 674px;
+$screen-tablet: 942px;
+$screen-laptop: 1046px;
+
 $purple: #a259ff;
 $dark: #2b2b2b;
 $dark-light: #3b3b3b;
@@ -16,3 +21,20 @@ $border-radius: 20px;
 $container-width: 1050px;
 
 $duration: 0.15s;
+
+// MIXINS
+
+@mixin noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                       supported by Chrome, Opera and Firefox */
+}
+@mixin bgDefault {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

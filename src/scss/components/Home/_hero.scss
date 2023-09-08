@@ -3,23 +3,42 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   padding: 80px 0;
+  @include mediaMobile {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+  }
   &__column {
     &:first-child {
       padding-right: 20px;
+      @include mediaMobile {
+        padding-right: 0;
+      }
     }
   }
   &__title {
     margin-bottom: 20px;
     text-transform: capitalize;
     font-size: 67px;
-    line-height: 73.7px;
+    //  line-height: 73.7px;
+    line-height: 1.1em;
     font-weight: 600;
+    @include mediaTablet {
+      font-size: 38px;
+    }
+    @include mediaMobile {
+      font-size: 28px;
+      line-height: 39.2px;
+    }
   }
   &__desc {
     margin-bottom: 30px;
     text-transform: capitalize;
     font-size: $font-size-large;
     line-height: 35.2px;
+    @include mediaTablet {
+      font-size: 16px;
+      line-height: 22.4px;
+    }
   }
   &__info {
     display: grid;
@@ -36,14 +55,26 @@
       font-size: 28px;
       font-family: 'Space Mono';
       font-weight: 700;
+      @include mediaTablet {
+        font-size: $font-size-large;
+      }
     }
     &-subtitle {
       font-size: 24px;
+      @include mediaTablet {
+        font-size: $font-size-medium;
+      }
     }
   }
   &__wrapper {
     border-radius: $border-radius;
     background-color: $dark-light;
+    overflow: hidden;
+  }
+  &__img {
+    @include mediaMobile {
+      width: 100%;
+    }
   }
   &__artist {
     padding: 22px 20px;
@@ -62,6 +93,11 @@
     }
     & .author {
       margin-left: 12px;
+    }
+  }
+  & .button {
+    @include mediaMobile {
+      width: 100%;
     }
   }
 }

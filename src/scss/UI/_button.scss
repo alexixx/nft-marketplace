@@ -9,6 +9,8 @@
   font-size: $font-size-medium;
   border: 2px solid $purple;
   border-radius: $border-radius;
+  white-space: nowrap;
+  @include noselect;
   &--color {
     &--purple {
       color: $white;

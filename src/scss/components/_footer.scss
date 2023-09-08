@@ -1,10 +1,14 @@
 .footer {
   background-color: $dark-light;
+
   &__wrapper {
     display: grid;
     column-gap: 50px;
     grid-template: 1fr 40px / 2fr 1fr 3fr;
     padding: 40px 0;
+    @include mediaTablet {
+      grid-template: 1fr / 1fr;
+    }
   }
   &__title {
     margin-bottom: 25px;
@@ -16,7 +20,7 @@
   }
   & p {
     margin-bottom: 20px;
-    color: $grey;
+    color: #cccccc;
     line-height: 22.4px;
   }
   &__social {
@@ -24,18 +28,47 @@
     & > a {
       margin-right: 12px;
     }
+    @include mediaTablet {
+      margin-bottom: 25px;
+    }
   }
   &__link {
     display: block;
     margin-bottom: 20px;
-    color: $grey;
+    color: #cccccc;
   }
   &__copyright {
     grid-column: 1 / span 3;
     margin-top: 30px;
     padding-top: 20px;
-    color: $grey;
+    color: #cccccc;
     font-size: $font-size-small;
     border-top: 1px solid $grey;
+    @include mediaTablet {
+      grid-column: 1;
+    }
+  }
+  & .form--subscribe {
+    @include mediaTablet {
+      width: 52%;
+      width: calc(100vw - 30vw);
+    }
+
+    @include mediaMobile {
+      width: 100%;
+    }
+    & input {
+      @include mediaMobile {
+        padding: 12px 20px;
+      }
+    }
+    & > .button {
+      @include mediaMobile {
+        position: relative;
+        width: 100%;
+        margin-top: 16px;
+        padding: 12px 20px;
+      }
+    }
   }
 }

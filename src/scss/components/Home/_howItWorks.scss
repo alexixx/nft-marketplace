@@ -1,17 +1,29 @@
 .how-it-works {
   padding: 80px 0;
+  @include mediaTablet {
+    padding: 40px 0;
+  }
   &__title {
     margin-bottom: 20px;
+    @include mediaTablet {
+      font-size: 28px;
+    }
   }
   &__desc {
     text-transform: capitalize;
     font-size: $font-size-large;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
   }
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 48px;
+    @include mediaTablet {
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     display: flex;
@@ -22,13 +34,39 @@
     padding-top: 10px;
     border-radius: $border-radius;
     background-color: $dark-light;
+    @include mediaTablet {
+      flex-direction: row;
+    }
+    @include mediaTablet {
+      padding: 20px 30px;
+    }
+  }
+  &__image {
+    @include mediaTablet {
+      margin-right: 20px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    @include mediaTablet {
+      align-items: flex-start;
+    }
     & > p:last-child {
       text-align: center;
       line-height: 22.4px;
+      @include mediaTablet {
+        text-align: left;
+        font-size: $font-size-small;
+      }
     }
   }
   &__name {
-    font-size: $font-size-large;
     margin-bottom: 10px;
+    text-align: center;
+    font-size: $font-size-large;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
   }
 }

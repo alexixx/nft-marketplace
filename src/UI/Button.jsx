@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Button = ({ value, color, size, icon, callback }) => {
+const Button = ({ value, color, size, icon, callback, customClass }) => {
   return (
-    <button className={`button button--color--${color} button--size--${size} `} onClick={callback}>
+    <button
+      className={`button ${
+        customClass ? customClass : ''
+      } button--color--${color} button--size--${size} `}
+      onClick={callback}>
       {icon && <img src={icon} alt={`icon-${icon}`} className="icon" />}
       {value}
     </button>

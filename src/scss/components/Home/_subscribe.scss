@@ -1,25 +1,78 @@
 .subscribe {
   padding-top: 40px;
   padding-bottom: 80px;
+  @include mediaMobile {
+    padding: 40px 0;
+  }
   &__wrapper {
     display: flex;
-    align-items: center;
+    align-items: normal;
     justify-content: space-between;
+    gap: 80px;
     padding: 60px;
     background-color: $dark-light;
     border-radius: $border-radius;
+    @include mediaTablet {
+      gap: 30px;
+    }
+    @include mediaMobile {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0;
+      background-color: transparent;
+    }
   }
+
   &__image {
-    margin-right: 80px;
+    flex: 1;
+    min-width: 46%;
+    //  margin-right: 80px;
+    border-radius: $border-radius;
+    @include bgDefault;
+    @include mediaTablet {
+      width: 50%;
+      // margin-right: 30px;
+    }
+    @include mediaMobile {
+      width: 100%;
+      min-height: 255px;
+    }
   }
   &__title {
     line-height: 45.6px;
+    @include mediaTablet {
+      font-size: 28px;
+    }
   }
   &__desc {
     margin-top: 10px;
     margin-bottom: 40px;
     font-size: $font-size-large;
-    line-height: 35.2px;
+    //  line-height: 35.2px;
+    line-height: 1.6em;
     text-transform: capitalize;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
+  }
+  & .form--subscribe {
+    & input {
+      @include mediaTablet {
+        padding: 12px 19px;
+      }
+    }
+    & .button {
+      @include mediaTablet {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px 19px;
+      }
+    }
+  }
+  &__text {
+    @include mediaMobile {
+      width: 100%;
+    }
   }
 }

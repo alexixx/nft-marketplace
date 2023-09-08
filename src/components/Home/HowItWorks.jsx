@@ -361,11 +361,13 @@ const HowItWorks = () => {
               </clipPath>
             </defs>
           </svg>
-          <p className="how-it-works__name">Setup Your wallet</p>
-          <p>
-            Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon in
-            the top right corner.
-          </p>
+          <div className="how-it-works__wrapper">
+            <p className="how-it-works__name">Setup Your wallet</p>
+            <p>
+              Set up your wallet of choice. Connect it to the Animarket by clicking the wallet icon
+              in the top right corner.
+            </p>
+          </div>
         </div>
         <div className="how-it-works__item">
           <svg
@@ -648,11 +650,13 @@ const HowItWorks = () => {
               </clipPath>
             </defs>
           </svg>
-          <p className="how-it-works__name">Create Collection</p>
-          <p>
-            Upload your work and setup your collection. Add a description, social links and floor
-            price.
-          </p>
+          <div className="how-it-works__wrapper">
+            <p className="how-it-works__name">Create Collection</p>
+            <p>
+              Upload your work and setup your collection. Add a description, social links and floor
+              price.
+            </p>
+          </div>
         </div>
         <div className="how-it-works__item">
           <svg
@@ -1076,11 +1080,13 @@ const HowItWorks = () => {
               </clipPath>
             </defs>
           </svg>
-          <p className="how-it-works__name">Start Earning</p>
-          <p>
-            Choose between auctions and fixed-price listings. Start earning by selling your NFTs or
-            trading others.
-          </p>
+          <div className="how-it-works__wrapper">
+            <p className="how-it-works__name">Start Earning</p>
+            <p>
+              Choose between auctions and fixed-price listings. Start earning by selling your NFTs
+              or trading others.
+            </p>
+          </div>
         </div>
       </div>
     </section>

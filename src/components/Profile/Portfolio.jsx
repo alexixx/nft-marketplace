@@ -9,7 +9,6 @@ const Portfolio = () => {
     <section className="user-portfolio">
       <div className="container">
         <div className="user-portfolio__wrapper">
-          {' '}
           <CardNFT
             title="Magic Mushroom 0325"
             author="Shroomie"
