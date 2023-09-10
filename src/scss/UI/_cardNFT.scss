@@ -45,6 +45,11 @@
       font-size: $font-size-small;
       margin-bottom: 8px;
     }
+    & .value {
+      @include mediaMobile {
+        font-size: $font-size-small;
+      }
+    }
   }
 }
 

@@ -12,14 +12,31 @@
     justify-content: space-between;
 
     padding: 40px 0;
+    @include mediaMobile {
+      flex-direction: column-reverse;
+    }
   }
   &__column {
     flex-basis: min-content;
     width: 50%;
+    &:nth-child(1) {
+      @include mediaTablet {
+        flex: 1;
+      }
+      @include mediaMobile {
+        margin-top: 40px;
+      }
+    }
+    @include mediaMobile {
+      width: 100%;
+    }
   }
   &__title {
     margin-bottom: 25px;
     font-size: 51px;
+    @include mediaTablet {
+      font-size: 38px;
+    }
   }
   &__subtitle {
     margin-top: 30px;
@@ -28,10 +45,16 @@
     font-family: 'Space Mono';
     font-size: $font-size-large;
     font-weight: 600;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
   }
   &__date {
     color: $grey;
     font-size: $font-size-large;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
   }
   &__artist {
     display: flex;
@@ -48,6 +71,10 @@
     line-height: 35.2px;
     & > p {
       margin-bottom: 20px;
+      font-size: $font-size-large;
+      @include mediaTablet {
+        font-size: $font-size-medium;
+      }
       &:last-child {
         margin-bottom: 0;
       }
@@ -62,20 +89,33 @@
       display: flex;
       align-items: center;
       font-size: $font-size-large;
+      @include mediaTablet {
+        font-size: $font-size-medium;
+      }
       & > img {
         margin-right: 10px;
+        @include mediaTablet {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
   &__tags {
     display: flex;
     gap: 20px;
+    @include mediaTablet {
+      flex-direction: column;
+    }
     & > div {
       cursor: pointer;
       padding: 12px 30px;
       border-radius: $border-radius;
       background-color: $dark-light;
       user-select: none;
+      @include mediaTablet {
+        width: max-content;
+      }
     }
   }
 }
