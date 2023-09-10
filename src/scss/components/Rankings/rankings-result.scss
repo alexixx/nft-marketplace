@@ -2,48 +2,89 @@
   margin: 40px 0;
   &__list {
     display: grid;
-    grid-template: 46px repeat(auto-fill, 84px) / 1fr;
+    //  grid-template: 46px repeat(auto-fill, 84px) / 1fr;
+    grid-template: 46px / 1fr;
     gap: 20px;
   }
   &__item {
     display: grid;
-    grid-template-columns: 5% 3fr 1fr 1fr 1fr;
+    grid-template-columns: 0.3fr 3fr 1fr 1fr 1fr;
     align-items: center;
     padding: 12px 20px;
     font-family: 'Space Mono';
     border-radius: $border-radius;
     background-color: $dark-light;
-    & > .number {
-      & > span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        color: $grey;
-        border-radius: 30px;
-        background-color: $dark;
-      }
+    @include mediaTablet {
+      grid-template-columns: 0.3fr 3fr 1fr 1fr;
     }
-    & > .artist {
-      display: flex;
-      align-items: center;
-      font-family: 'Work Sans';
-      font-size: $font-size-large;
-      & > img {
-        width: 60px;
-        height: 60px;
-        margin-right: 20px;
-        border-radius: 60px;
-      }
-    }
-    & > .change {
-      color: $green;
+    @include mediaMobile {
+      grid-template-columns: 0.3fr 3fr 1fr;
     }
     &--title {
       color: $grey;
       border: 1px solid $dark-light;
       background-color: $dark;
+      & > .artist {
+        @include mediaMobile {
+          font-size: $font-size-small;
+        }
+      }
+    }
+    &:not(.rankings-result__item--title) {
+      & > .number {
+        & > span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          color: $grey;
+          border-radius: 30px;
+          background-color: $dark;
+          @include mediaTablet {
+            font-size: $font-size-small;
+            background-color: transparent;
+          }
+        }
+      }
+      & > .artist {
+        display: flex;
+        align-items: center;
+        font-family: 'Work Sans';
+        font-size: $font-size-large;
+        & > img {
+          width: 60px;
+          height: 60px;
+          margin-right: 20px;
+          border-radius: 60px;
+          @include mediaTablet {
+            width: 24px;
+            height: 24px;
+          }
+        }
+        @include mediaMobile {
+          font-size: $font-size-medium;
+        }
+      }
+      & > .change {
+        color: $green;
+      }
+    }
+
+    & > .sold {
+      @include mediaTablet {
+        display: none;
+      }
+    }
+    & > .change {
+      @include mediaMobile {
+        display: none;
+      }
+    }
+    & > .volume {
+      @include mediaMobile {
+        font-size: $font-size-small;
+      }
     }
   }
 }

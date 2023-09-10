@@ -15,6 +15,7 @@
   &__desc {
     margin-bottom: 30px;
     font-size: $font-size-large;
+    line-height: 22.4px;
     @include mediaTablet {
       font-size: $font-size-medium;
     }
