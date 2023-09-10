@@ -37,6 +37,10 @@
     font-size: $font-size-medium;
     border-radius: $border-radius;
     background-color: $dark-light;
+    @include mediaTablet {
+      font-size: $font-size-small;
+      font-weight: normal;
+    }
     @include mediaMobile {
       display: none;
     }

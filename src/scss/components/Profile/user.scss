@@ -22,34 +22,58 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     padding-top: 90px;
     padding-bottom: 40px;
   }
-  &__column {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &:first-child {
+      @include mediaTablet {
+        flex-direction: column;
+        margin-bottom: 30px;
+      }
+    }
     &:nth-child(2) {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-end;
-      gap: 30px;
+      flex-direction: column;
     }
   }
   &__title {
     margin-bottom: 30px;
     font-size: 51px;
     font-weight: 600;
+    @include mediaTablet {
+      font-size: 38px;
+    }
+    @include mediaMobile {
+      font-size: 28px;
+    }
   }
   &__info {
     display: flex;
-    justify-content: space-between;
-    width: 510px;
+    justify-content: flex-start;
+    /* width: 510px; */
+    gap: 77px;
+    @include mediaMobile {
+      justify-content: space-between;
+      gap: 0;
+    }
     & > div {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       font-size: $font-size-large;
+      @include mediaTablet {
+        font-size: $font-size-medium;
+      }
       & > span {
         font-size: 28px;
         font-family: 'Space Mono Bold';
+        @include mediaTablet {
+          font-size: $font-size-large;
+        }
       }
     }
   }
@@ -60,9 +84,15 @@
     font-family: 'Space Mono';
     font-size: $font-size-large;
     color: $grey;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
   }
   &__desc {
     font-size: $font-size-large;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
   }
   &__social {
     display: flex;
@@ -76,5 +106,22 @@
     height: 120px;
     border: 2px solid $dark;
     border-radius: $border-radius;
+    @include mediaMobile {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__button-wrapper {
+    display: flex;
+    gap: 20px;
+    @include mediaTablet {
+      flex-direction: column;
+    }
+    & > .button {
+      align-self: flex-start;
+      @include mediaTablet {
+        width: 100%;
+      }
+    }
   }
 }
