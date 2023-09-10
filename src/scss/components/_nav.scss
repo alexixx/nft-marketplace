@@ -13,6 +13,7 @@
     white-space: nowrap;
   }
   &__button-mobile {
+    z-index: 9999;
     display: none;
     margin: auto;
     @include mediaTablet {

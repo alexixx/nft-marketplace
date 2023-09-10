@@ -4,7 +4,6 @@ const Tabs = ({ values, activeTabDefault }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
-    console.log(values);
     setActiveTab(activeTabDefault);
   }, []);
 
