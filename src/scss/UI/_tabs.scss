@@ -18,6 +18,9 @@
     font-size: $font-size-large;
 
     border-bottom: 2px solid transparent;
+    @include mediaTablet {
+      font-size: $font-size-medium;
+    }
     &.active {
       color: $white;
       border-bottom: 2px solid $grey;
@@ -34,5 +37,8 @@
     font-size: $font-size-medium;
     border-radius: $border-radius;
     background-color: $dark-light;
+    @include mediaMobile {
+      display: none;
+    }
   }
 }

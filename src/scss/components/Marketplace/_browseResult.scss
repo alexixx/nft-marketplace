@@ -9,5 +9,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    @include mediaTablet {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mediaMobile {
+      grid-template-columns: 1fr;
+    }
   }
 }
