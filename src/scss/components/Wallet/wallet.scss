@@ -5,10 +5,36 @@
   gap: 60px;
   align-items: center;
   justify-content: center;
+  @include mediaMobile {
+    flex-direction: column;
+    gap: 40px;
+  }
   &__column {
+    &:first-child {
+      @include mediaMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        max-height: 232px;
+        width: 100%;
+      }
+      & > img {
+        width: 100%;
+      }
+    }
+    &:last-child {
+      @include mediaMobile {
+        padding: 0 25px;
+        padding-bottom: 40px;
+      }
+    }
   }
   &__title {
     font-size: 51px;
+    @include mediaTablet {
+      font-size: 38px;
+    }
   }
   &__desc {
     max-width: 460px;
@@ -16,6 +42,9 @@
     margin-bottom: 40px;
     font-size: $font-size-large;
     line-height: 35.2px;
+    @include mediaTablet {
+      font-size: 16px;
+    }
   }
   &__list {
     display: flex;
@@ -32,6 +61,9 @@
     border: 1px solid $purple;
     border-radius: $border-radius;
     background-color: $dark-light;
+    @include mediaMobile {
+      max-width: 100%;
+    }
     & > img {
       margin-right: 20px;
     }

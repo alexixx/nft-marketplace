@@ -1,3 +1,11 @@
+* {
+  ::selection {
+    background: $purple; /* Safari */
+  }
+  ::-moz-selection {
+    background: $purple; /* Firefox */
+  }
+}
 html {
   scroll-behavior: smooth;
 }

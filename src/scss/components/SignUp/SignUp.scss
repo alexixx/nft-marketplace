@@ -3,9 +3,45 @@
   justify-content: center;
   align-items: center;
   gap: 60px;
+  @include mediaMobile {
+    flex-direction: column;
+  }
+  &__column {
+    &:first-child {
+      @include mediaMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        max-height: 232px;
+        width: 100%;
+      }
+      & > img {
+        @include mediaMobile {
+          width: 100%;
+        }
+      }
+    }
+    &:last-child {
+      @include mediaMobile {
+        padding: 0 25px;
+        padding-bottom: 40px;
+      }
+      & > .form--signup {
+        & > label > input,
+        & > .button {
+          width: 100%;
+        }
+      }
+    }
+  }
   &__title {
     font-size: 51px;
     margin-bottom: 35px;
+    @include mediaTablet {
+      font-size: 38px;
+      line-height: 45.6px;
+    }
   }
   &__desc {
     max-width: 460px;
@@ -13,5 +49,9 @@
     text-transform: capitalize;
     font-size: $font-size-large;
     line-height: 35.2px;
+    @include mediaTablet {
+      line-height: 22.4px;
+      font-size: $font-size-medium;
+    }
   }
 }
