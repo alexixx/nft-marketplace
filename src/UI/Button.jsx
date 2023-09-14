@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Button = ({ value, color, size, icon, callback, customClass }) => {
+const Button = ({ value, color, size, icon, callback, customClass, attrs }) => {
   const [iconSVG, setIconSVG] = useState(null);
   useEffect(() => {
     console.log('icon', icon);
@@ -211,12 +211,12 @@ const Button = ({ value, color, size, icon, callback, customClass }) => {
         break;
     }
   }, [icon]);
-
   return (
     <button
-      className={`button ${customClass ? customClass : ''} ${
-        color ? `button--color--${color}` : `button--color--transparent`
-      } button--size--${size} `}
+      className={`button ${
+        customClass ? customClass : ''
+      } button--color--${color} button--size--${size} `}
+      {...attrs}
       onClick={callback}>
       {/* {icon && <img src={icon} alt={`icon-${icon}`} className="icon" />} */}
       {iconSVG ? iconSVG : ''}
