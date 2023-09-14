@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '../../UI/Button';
 import CardNFT from '../../UI/CardNFT';
 
-import arrowIcon from '../../assets/img/icons/arrow_purple.svg';
 import discoverImg from '../../assets/img/content/home/discover.png';
 import authorImg from '../../assets/img/content/home/author.png';
 
@@ -15,7 +14,7 @@ const Portfolio = () => {
             <div class="wrapper wrapper--column">
               <h2 class="nft-portfolio__title">More from this artist</h2>
             </div>
-            <Button value="Go To Artist Page" icon={arrowIcon} size="medium" />
+            <Button value="Go To Artist Page" icon="arrow" size="medium" />
           </div>
           <div className="nft-portfolio__list">
             <CardNFT

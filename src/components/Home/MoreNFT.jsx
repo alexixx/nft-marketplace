@@ -1,5 +1,4 @@
 import React from 'react';
-import eyeImg from '../../assets/img/icons/eye.svg';
 import discoverImg from '../../assets/img/content/home/discover.png';
 import authorImg from '../../assets/img/content/home/author.png';
 
@@ -14,7 +13,7 @@ const MoreNFT = () => {
           <h2 className="more-nft__title">Discover More NFTs</h2>
           <p className="more-nft__desc">Explore new trending NFTs</p>
         </div>
-        <Button value="See All" icon={eyeImg} size="medium" />
+        <Button value="See All" icon="eye" size="medium" />
       </div>
 
       <div className="more-nft__list">

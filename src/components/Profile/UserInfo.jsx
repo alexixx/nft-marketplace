@@ -95,8 +95,8 @@ const UserInfo = () => {
             <div className="user__row">
               <div className="user__title">Animakid</div>
               <div className="user__button-wrapper">
-                <Button value="0xc0E3...B79C" color="purple" icon={copyIcon} />
-                <Button value="Follow" icon={plusIcon} />
+                <Button value="0xc0E3...B79C" color="purple" icon="copy" />
+                <Button value="Follow" icon="plus" />
               </div>
             </div>
             <div className="user__row">

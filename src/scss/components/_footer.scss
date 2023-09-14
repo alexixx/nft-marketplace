@@ -63,6 +63,9 @@
       }
     }
     & > .button {
+      & > svg {
+        display: none;
+      }
       @include mediaMobile {
         position: relative;
         width: 100%;

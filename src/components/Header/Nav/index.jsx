@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router-dom';
 import Button from '../../../UI/Button';
 import MobileMenu from '../../MobileMenu.jsx';
 
-import userImg from '../../../assets/img/icons/user.svg';
 import burgerImg from '../../../assets/img/icons/burger.svg';
 
 const Nav = () => {
@@ -36,7 +35,7 @@ const Nav = () => {
         <Button
           value="Sign Up"
           color="purple"
-          icon={userImg}
+          icon="user"
           callback={() => navigate('/user/signup')}
           customClass="nav__button-signup"
         />

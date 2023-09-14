@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Button from '../../UI/Button';
-import rocketImg from '../../assets/img/icons/rocket__white.svg';
 import heroImg from '../../assets/img/content/home/hero.png';
 import authorImg from '../../assets/img/content/home/author.png';
 
@@ -14,7 +13,7 @@ const Hero = () => {
           NFT marketplace UI created with Anima for Figma. Collect, buy and sell art from more than
           20k NFT artists.
         </p>
-        <Button color="purple" value="Get Started" icon={rocketImg} size="medium" />
+        <Button color="purple" value="Get Started" icon="rocket" size="medium" />
         <div className="hero__info">
           <div>
             <p className="hero__info-title">240k+</p>

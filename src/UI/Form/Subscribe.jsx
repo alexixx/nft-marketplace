@@ -8,7 +8,7 @@ const Subscribe = () => {
       <label htmlFor="">
         <input type="text" placeholder="Enter your email here" name="email" id="email" />
       </label>
-      <Button value="Subscribe" icon={mailImg} color="purple" size="medium" />
+      <Button value="Subscribe" icon="mail" color="purple" size="medium" />
     </form>
   );
 };

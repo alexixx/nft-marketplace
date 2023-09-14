@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Button from '../UI/Button';
-import userImg from '../assets/img/icons/user.svg';
 
 const MobileMenu = ({ mobileMenu, setMobileMenu }) => {
   const navigate = useNavigate();

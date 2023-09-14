@@ -3,6 +3,7 @@
   flex-direction: column;
   border-radius: $border-radius;
   overflow: hidden;
+  transition: 300ms ease-out;
   &__info {
     padding: 20px 30px;
     background-color: $dark-light;

@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,19 +12,70 @@
   border-radius: $border-radius;
   white-space: nowrap;
   @include noselect;
+  overflow: hidden;
+  transition: 0.4s;
+  &__title {
+    z-index: 2;
+  }
+  &__inner {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15%;
+    height: 140%;
+    background-color: $white;
+    transform: translate(-200px, -10px) rotate(12deg);
+    opacity: 0.6;
+    transition: 0.8s;
+  }
+  &:hover {
+    .button__inner {
+      transform: translate(calc(100% + 800%), -10px) rotate(12deg);
+      transition: 1s;
+    }
+  }
+  &:active {
+    filter: hue-rotate(31deg);
+  }
+
   &--color {
     &--purple {
       color: $white;
       background-color: $purple;
+      &:hover {
+        box-shadow: 0px 0px 13px 0px $purple;
+        transition: 0.4s;
+      }
     }
     &--white {
       color: $dark;
       background-color: $white;
       border-color: $white;
+      & > svg {
+        & > * {
+          fill: $purple;
+        }
+      }
+      &:hover {
+        box-shadow: 0px 0px 13px 0px $white;
+        transition: 0.4s;
+        .button__inner {
+          transform: none;
+        }
+      }
     }
     &--transparent {
-      color: $purple;
-      color: $purple;
+      color: $white;
+      & > svg {
+        & > * {
+          fill: $purple;
+        }
+      }
+      &:hover {
+        box-shadow: 0px 0px 13px 0px $purple;
+        transition: 0.4s;
+      }
     }
   }
   &--size {
@@ -37,7 +89,7 @@
       width: 100%;
     }
   }
-  & .icon {
-    margin-right: 16px;
+  & > svg {
+    margin-right: 12px;
   }
 }

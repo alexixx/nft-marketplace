@@ -1,6 +1,5 @@
 import React from 'react';
 
-import rocketImg from '../../assets/img/icons/rocket__purple.svg';
 import authorImg from '../../assets/img/content/home/author.png';
 import Button from '../../UI/Button';
 
@@ -12,7 +11,7 @@ const TopCreators = () => {
           <h2 className="top-creators__title">Top creators</h2>
           <p className="top-creators__desc">Checkout Top Rated Creators on the NFT Marketplace</p>
         </div>
-        <Button value="View Rankings" icon={rocketImg} size="medium" />
+        <Button value="View Rankings" icon="rocket" size="medium" />
       </div>
       <div className="top-creators__list">
         <div className="top-creators__card">
