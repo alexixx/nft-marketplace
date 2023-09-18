@@ -7,17 +7,16 @@ import mailImg from '../../assets/img/icons/grey/mail.svg';
 import userImg from '../../assets/img/icons/grey/user.svg';
 import lockImg from '../../assets/img/icons/grey/lock.svg';
 
-const SignUp = () => {
+const LogIn = () => {
   const [formData, setFormData] = useState(null);
 
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordConfrim, setPasswordConfrim] = useState('');
 
   useEffect(() => {
-    const Registration = async () => {
-      await fetch('/api/user/create', {
+    const Authentication = async () => {
+      await fetch('/api/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,17 +24,20 @@ const SignUp = () => {
         body: JSON.stringify(formData),
       }).then((res) => {
         if (!res.ok) {
+          console.log(res);
+          // Обработайте успешный ответ от сервера
           throw new Error('Ошибка ввода данных');
-        } else {
-          console.log('Пользователь создан');
         }
+        return res.json();
       });
     };
-    if (formData) Registration();
+
+    if (formData) Authentication();
   }, [formData]);
 
-  const onSubmit = async (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
+
     setFormData({
       name,
       mail,
@@ -52,9 +54,6 @@ const SignUp = () => {
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   };
-  const onChangePasswordConfrim = (e) => {
-    setPasswordConfrim(e.target.value);
-  };
 
   return (
     <form
@@ -68,7 +67,7 @@ const SignUp = () => {
         <input
           type="text"
           placeholder="Username"
-          name="username"
+          name="name"
           id="username"
           value={name}
           onChange={(e) => {
@@ -76,6 +75,7 @@ const SignUp = () => {
           }}
         />
       </label>
+      <p align="center">Or</p>
       <label htmlFor="">
         <img src={mailImg} alt="" className="icon" />
         <input
@@ -83,7 +83,6 @@ const SignUp = () => {
           placeholder="Email Address"
           name="email"
           id="email"
-          value={mail}
           onChange={(e) => {
             onChangeMail(e);
           }}
@@ -96,26 +95,13 @@ const SignUp = () => {
           placeholder="Password"
           name="password"
           id="password"
-          value={password}
           onChange={(e) => {
             onChangePassword(e);
           }}
         />
       </label>
-      <label htmlFor="">
-        <img src={lockImg} alt="" className="icon" />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          name="confrimPassword"
-          id="confrimPassword"
-          onChange={(e) => {
-            onChangePasswordConfrim(e);
-          }}
-        />
-      </label>
       <Button
-        value="Create account"
+        value="Log In"
         color="purple"
         size="small"
         attrs={{
@@ -126,4 +112,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default LogIn;

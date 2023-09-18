@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const Button = ({ value, color, size, icon, callback, customClass, attrs }) => {
   const [iconSVG, setIconSVG] = useState(null);
   useEffect(() => {
-    console.log('icon', icon);
     switch (icon) {
       case 'user':
         setIconSVG(
@@ -213,9 +212,9 @@ const Button = ({ value, color, size, icon, callback, customClass, attrs }) => {
   }, [icon]);
   return (
     <button
-      className={`button ${
-        customClass ? customClass : ''
-      } button--color--${color} button--size--${size} `}
+      className={`button ${customClass ? customClass : ''} ${
+        color ? `button--color--${color}` : `button--color--transparent`
+      } ${size ? `button--size--${size}` : ``} `}
       {...attrs}
       onClick={callback}>
       {/* {icon && <img src={icon} alt={`icon-${icon}`} className="icon" />} */}

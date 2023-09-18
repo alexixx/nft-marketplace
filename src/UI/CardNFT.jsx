@@ -2,30 +2,32 @@ import React, { useRef } from 'react';
 
 const CardNFT = ({ title, author, price, highestBid, imgCard, imgAuthor, theme }) => {
   const card = useRef();
-  const onCardOver = (e) => {
-    //  var w = window.innerWidth / 2;
-    //  var h = window.innerHeight / 2;
-    //  console.log('w ', w);
-    //  console.log('h ', h);
-    //  var x = (e.pageX - w) / 100;
-    //  var y = (e.pageY - h) / 100;
-    //  card.current.style.transform = 'rotateX(' + y + 'deg) rotateY(' + x + 'deg)';
-    //  //  card.current.style.transform = 'rotateX(5deg) rotateY(5deg)';
+  const onCardMove = (e) => {
+    const cardRect = card.current.getBoundingClientRect();
+    const centerX = cardRect.left + cardRect.width / 2;
+    const centerY = cardRect.top + cardRect.height / 2;
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const angleX = (centerY - mouseY) / 30;
+    const angleY = (centerX - mouseX) / 30;
+
+    card.current.style.transform = 'rotateX(' + angleX + 'deg) rotateY(' + angleY + 'deg) ';
   };
+
   const onCardOut = (e) => {
+    card.current.style.transition = '.3s';
     card.current.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    setTimeout(() => {
+      card.current.style.transition = 'none';
+    }, 300);
   };
   return (
-    <div
-      class={`card ${theme ? `theme--${theme}` : ''}`}
-      onMouseOver={(e) => {
-        onCardOver(e);
-      }}
-      onMouseOut={() => {
-        onCardOut();
-      }}
-      ref={card}>
-      <img src={imgCard} alt="discover" class="card__image" />
+    <div class={`card ${theme ? `theme--${theme}` : ''}`} ref={card}>
+      <div className="card__image-wrapper">
+        <img src={imgCard} alt="discover" class="card__image" />
+      </div>
+
       <div class={`card__info`}>
         <p class="card__name">{title}</p>
         <div class="card__artist">
@@ -43,6 +45,14 @@ const CardNFT = ({ title, author, price, highestBid, imgCard, imgAuthor, theme }
           </div>
         </div>
       </div>
+      <div
+        className="card__inner"
+        onMouseMove={(e) => {
+          onCardMove(e);
+        }}
+        onMouseOut={(e) => {
+          onCardOut(e);
+        }}></div>
     </div>
   );
 };
