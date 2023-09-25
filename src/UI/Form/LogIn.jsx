@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { setUserData, setToken } from '../../redux/slices/userSlice';
 import Button from '../Button';
 
 // ICONS
@@ -8,6 +11,7 @@ import userImg from '../../assets/img/icons/grey/user.svg';
 import lockImg from '../../assets/img/icons/grey/lock.svg';
 
 const LogIn = () => {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState(null);
 
   const [name, setName] = useState('');
@@ -16,20 +20,30 @@ const LogIn = () => {
 
   useEffect(() => {
     const Authentication = async () => {
-      await fetch('/api/user/login', {
+      const response = await fetch('/api/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       }).then((res) => {
-        if (!res.ok) {
-          console.log(res);
-          // Обработайте успешный ответ от сервера
-          throw new Error('Ошибка ввода данных');
-        }
         return res.json();
       });
+
+      if (!response.error) {
+        dispatch(setUserData(response.data));
+        dispatch(setToken(response.token));
+
+        localStorage.setItem(
+          'user',
+          JSON.stringify({
+            data: response.data,
+            token: response.token,
+          }),
+        );
+      } else {
+        console.error('Ошибка ввода данных');
+      }
     };
 
     if (formData) Authentication();
@@ -58,7 +72,7 @@ const LogIn = () => {
   return (
     <form
       action=""
-      className="form form--signup"
+      className="form form--login"
       onSubmit={(e) => {
         onSubmit(e);
       }}>
@@ -108,6 +122,9 @@ const LogIn = () => {
           type: 'submit',
         }}
       />
+      <Link to={'/user/signup'} className="link">
+        No account?
+      </Link>
     </form>
   );
 };

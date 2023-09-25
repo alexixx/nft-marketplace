@@ -14,7 +14,7 @@ const HowItWorks = () => {
             viewBox="0 0 250 250"
             fill="none"
             className="how-it-works__image">
-            <g clip-path="url(#clip0_5385_5827)">
+            <g clipPath="url(#clip0_5385_5827)">
               <path
                 d="M125 229.167C182.53 229.167 229.166 182.531 229.166 125.001C229.166 67.471 182.53 20.834 125 20.834C67.47 20.834 20.833 67.471 20.833 125.001C20.833 182.531 67.47 229.167 125 229.167Z"
                 fill="url(#paint0_linear_5385_5827)"
@@ -26,20 +26,20 @@ const HowItWorks = () => {
                 />
               </g>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M117.84 40.3808C119.583 40.3808 120.996 38.968 120.996 37.2252C120.996 35.4826 119.583 34.0698 117.84 34.0698C116.097 34.0698 114.685 35.4826 114.685 37.2252C114.685 38.968 116.097 40.3808 117.84 40.3808ZM117.84 42.7474C120.89 42.7474 123.363 40.275 123.363 37.2252C123.363 34.1755 120.89 31.7031 117.84 31.7031C114.79 31.7031 112.318 34.1755 112.318 37.2252C112.318 40.275 114.79 42.7474 117.84 42.7474Z"
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M42.6598 185.308C44.4026 185.308 45.8153 183.895 45.8153 182.153C45.8153 180.41 44.4026 178.998 42.6598 178.998C40.9171 178.998 39.5044 180.41 39.5044 182.153C39.5044 183.895 40.9171 185.308 42.6598 185.308ZM42.6598 187.675C45.7096 187.675 48.182 185.202 48.182 182.153C48.182 179.103 45.7096 176.631 42.6598 176.631C39.6101 176.631 37.1377 179.103 37.1377 182.153C37.1377 185.202 39.6101 187.675 42.6598 187.675Z"
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M215.668 178.062C217.411 178.062 218.824 176.649 218.824 174.906C218.824 173.164 217.411 171.752 215.668 171.752C213.925 171.752 212.513 173.164 212.513 174.906C212.513 176.649 213.925 178.062 215.668 178.062ZM215.668 180.429C218.718 180.429 221.191 177.956 221.191 174.906C221.191 171.857 218.718 169.385 215.668 169.385C212.618 169.385 210.146 171.857 210.146 174.906C210.146 177.956 212.618 180.429 215.668 180.429Z"
                 fill="white"
               />
@@ -201,8 +201,8 @@ const HowItWorks = () => {
                 width="260.174"
                 height="260.174"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="27" result="effect1_foregroundBlur_5385_5827" />
               </filter>
@@ -213,8 +213,8 @@ const HowItWorks = () => {
                 x2="208.897"
                 y2="53.9327"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_5385_5827"
@@ -223,8 +223,8 @@ const HowItWorks = () => {
                 x2="220.705"
                 y2="77.2917"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" stop-opacity="0" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" stopOpacity="0" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_5385_5827"
@@ -233,8 +233,8 @@ const HowItWorks = () => {
                 x2="217.771"
                 y2="208.969"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_5385_5827"
@@ -243,8 +243,8 @@ const HowItWorks = () => {
                 x2="52.4494"
                 y2="226.614"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_5385_5827"
@@ -253,8 +253,8 @@ const HowItWorks = () => {
                 x2="222.616"
                 y2="60.1618"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_5385_5827"
@@ -263,8 +263,8 @@ const HowItWorks = () => {
                 x2="191.714"
                 y2="127.091"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint6_linear_5385_5827"
@@ -273,8 +273,8 @@ const HowItWorks = () => {
                 x2="102.173"
                 y2="134.339"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint7_linear_5385_5827"
@@ -283,8 +283,8 @@ const HowItWorks = () => {
                 x2="164.798"
                 y2="77.7059"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint8_linear_5385_5827"
@@ -293,8 +293,8 @@ const HowItWorks = () => {
                 x2="154.102"
                 y2="103.952"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint9_linear_5385_5827"
@@ -303,8 +303,8 @@ const HowItWorks = () => {
                 x2="159.389"
                 y2="101.903"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint10_linear_5385_5827"
@@ -313,8 +313,8 @@ const HowItWorks = () => {
                 x2="94.8727"
                 y2="93.1169"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint11_linear_5385_5827"
@@ -323,8 +323,8 @@ const HowItWorks = () => {
                 x2="101.23"
                 y2="133.865"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint12_linear_5385_5827"
@@ -333,8 +333,8 @@ const HowItWorks = () => {
                 x2="101.619"
                 y2="138.016"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint13_linear_5385_5827"
@@ -343,8 +343,8 @@ const HowItWorks = () => {
                 x2="165.898"
                 y2="160.966"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint14_linear_5385_5827"
@@ -353,8 +353,8 @@ const HowItWorks = () => {
                 x2="3.60562"
                 y2="93.0235"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <clipPath id="clip0_5385_5827">
                 <rect width="250" height="250" fill="white" />
@@ -377,7 +377,7 @@ const HowItWorks = () => {
             viewBox="0 0 250 250"
             fill="none"
             className="how-it-works__image">
-            <g clip-path="url(#clip0_5385_5875)">
+            <g clipPath="url(#clip0_5385_5875)">
               <path
                 d="M125 229.167C182.53 229.167 229.166 182.531 229.166 125.001C229.166 67.471 182.53 20.834 125 20.834C67.47 20.834 20.833 67.471 20.833 125.001C20.833 182.531 67.47 229.167 125 229.167Z"
                 fill="url(#paint0_linear_5385_5875)"
@@ -389,20 +389,20 @@ const HowItWorks = () => {
                 />
               </g>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M75.2682 46.7206C77.0109 46.7206 78.4237 45.3078 78.4237 43.5651C78.4237 41.8224 77.0109 40.4096 75.2682 40.4096C73.5255 40.4096 72.1128 41.8224 72.1128 43.5651C72.1128 45.3078 73.5255 46.7206 75.2682 46.7206ZM75.2682 49.0873C78.318 49.0873 80.7904 46.6149 80.7904 43.5651C80.7904 40.5153 78.318 38.043 75.2682 38.043C72.2185 38.043 69.7461 40.5153 69.7461 43.5651C69.7461 46.6149 72.2185 49.0873 75.2682 49.0873Z"
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M46.2828 179.873C48.0256 179.873 49.4384 178.46 49.4384 176.717C49.4384 174.974 48.0256 173.562 46.2828 173.562C44.5402 173.562 43.1274 174.974 43.1274 176.717C43.1274 178.46 44.5402 179.873 46.2828 179.873ZM46.2828 182.24C49.3327 182.24 51.805 179.767 51.805 176.717C51.805 173.667 49.3327 171.195 46.2828 171.195C43.2331 171.195 40.7607 173.667 40.7607 176.717C40.7607 179.767 43.2331 182.24 46.2828 182.24Z"
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M204.797 91.1053C206.54 91.1053 207.953 89.6926 207.953 87.9498C207.953 86.2072 206.54 84.7944 204.797 84.7944C203.054 84.7944 201.642 86.2072 201.642 87.9498C201.642 89.6926 203.054 91.1053 204.797 91.1053ZM204.797 93.4721C207.847 93.4721 210.32 90.9993 210.32 87.9498C210.32 84.9001 207.847 82.4277 204.797 82.4277C201.747 82.4277 199.275 84.9001 199.275 87.9498C199.275 90.9993 201.747 93.4721 204.797 93.4721Z"
                 fill="white"
               />
@@ -480,8 +480,8 @@ const HowItWorks = () => {
                 width="260.175"
                 height="260.174"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="27" result="effect1_foregroundBlur_5385_5875" />
               </filter>
@@ -492,8 +492,8 @@ const HowItWorks = () => {
                 x2="208.897"
                 y2="53.9327"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_5385_5875"
@@ -502,8 +502,8 @@ const HowItWorks = () => {
                 x2="156.245"
                 y2="235.274"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" stop-opacity="0" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" stopOpacity="0" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_5385_5875"
@@ -512,8 +512,8 @@ const HowItWorks = () => {
                 x2="225.016"
                 y2="59.5142"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_5385_5875"
@@ -522,8 +522,8 @@ const HowItWorks = () => {
                 x2="50.6379"
                 y2="217.555"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_5385_5875"
@@ -532,8 +532,8 @@ const HowItWorks = () => {
                 x2="210.837"
                 y2="177.009"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint5_linear_5385_5875"
@@ -542,8 +542,8 @@ const HowItWorks = () => {
                 x2="182.892"
                 y2="240.768"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.416667" stop-color="#A259FF" stop-opacity="0" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.416667" stopColor="#A259FF" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint6_linear_5385_5875"
@@ -552,8 +552,8 @@ const HowItWorks = () => {
                 x2="88.7768"
                 y2="161.815"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF7262" />
-                <stop offset="0.317708" stop-color="#A259FF" />
+                <stop stopColor="#FF7262" />
+                <stop offset="0.317708" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint7_linear_5385_5875"
@@ -562,8 +562,8 @@ const HowItWorks = () => {
                 x2="152.341"
                 y2="127.114"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#3B3B3B" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#3B3B3B" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint8_linear_5385_5875"
@@ -572,8 +572,8 @@ const HowItWorks = () => {
                 x2="177.564"
                 y2="91.2282"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#3B3B3B" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#3B3B3B" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint9_linear_5385_5875"
@@ -582,8 +582,8 @@ const HowItWorks = () => {
                 x2="165.925"
                 y2="129.938"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#3B3B3B" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#3B3B3B" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint10_linear_5385_5875"
@@ -592,8 +592,8 @@ const HowItWorks = () => {
                 x2="191.169"
                 y2="94.0392"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#3B3B3B" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#3B3B3B" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint11_linear_5385_5875"
@@ -602,8 +602,8 @@ const HowItWorks = () => {
                 x2="167.786"
                 y2="121.807"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#3B3B3B" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#3B3B3B" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint12_linear_5385_5875"
@@ -612,8 +612,8 @@ const HowItWorks = () => {
                 x2="164.881"
                 y2="125.821"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#3B3B3B" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#3B3B3B" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint13_linear_5385_5875"
@@ -622,8 +622,8 @@ const HowItWorks = () => {
                 x2="135.466"
                 y2="97.2286"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF7262" />
-                <stop offset="1" stop-color="#A259FF" />
+                <stop stopColor="#FF7262" />
+                <stop offset="1" stopColor="#A259FF" />
               </linearGradient>
               <linearGradient
                 id="paint14_linear_5385_5875"
@@ -632,8 +632,8 @@ const HowItWorks = () => {
                 x2="102.615"
                 y2="75.9924"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint15_linear_5385_5875"
@@ -642,8 +642,8 @@ const HowItWorks = () => {
                 x2="88.1547"
                 y2="59.3849"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <clipPath id="clip0_5385_5875">
                 <rect width="250" height="250" fill="white" />
@@ -666,7 +666,7 @@ const HowItWorks = () => {
             viewBox="0 0 250 250"
             fill="none"
             className="how-it-works__image">
-            <g clip-path="url(#clip0_5385_5902)">
+            <g clipPath="url(#clip0_5385_5902)">
               <path
                 d="M125.001 229.167C182.531 229.167 229.167 182.531 229.167 125.001C229.167 67.471 182.531 20.834 125.001 20.834C67.4709 20.834 20.834 67.471 20.834 125.001C20.834 182.531 67.4709 229.167 125.001 229.167Z"
                 fill="url(#paint0_linear_5385_5902)"
@@ -678,20 +678,20 @@ const HowItWorks = () => {
                 />
               </g>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M56.2467 82.0468C57.9895 82.0468 59.4022 80.634 59.4022 78.8912C59.4022 77.1486 57.9895 75.7358 56.2467 75.7358C54.504 75.7358 53.0913 77.1486 53.0913 78.8912C53.0913 80.634 54.504 82.0468 56.2467 82.0468ZM56.2467 84.4134C59.2965 84.4134 61.7689 81.9411 61.7689 78.8912C61.7689 75.8415 59.2965 73.3691 56.2467 73.3691C53.197 73.3691 50.7246 75.8415 50.7246 78.8912C50.7246 81.9411 53.197 84.4134 56.2467 84.4134Z"
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M46.2838 179.873C48.0266 179.873 49.4393 178.46 49.4393 176.717C49.4393 174.974 48.0266 173.562 46.2838 173.562C44.5412 173.562 43.1284 174.974 43.1284 176.717C43.1284 178.46 44.5412 179.873 46.2838 179.873ZM46.2838 182.24C49.3336 182.24 51.806 179.767 51.806 176.717C51.806 173.667 49.3336 171.195 46.2838 171.195C43.2341 171.195 40.7617 173.667 40.7617 176.717C40.7617 179.767 43.2341 182.24 46.2838 182.24Z"
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M193.022 46.7206C194.764 46.7206 196.178 45.3078 196.178 43.5651C196.178 41.8224 194.764 40.4096 193.022 40.4096C191.279 40.4096 189.867 41.8224 189.867 43.5651C189.867 45.3078 191.279 46.7206 193.022 46.7206ZM193.022 49.0873C196.072 49.0873 198.544 46.6149 198.544 43.5651C198.544 40.5153 196.072 38.043 193.022 38.043C189.972 38.043 187.5 40.5153 187.5 43.5651C187.5 46.6149 189.972 49.0873 193.022 49.0873Z"
                 fill="white"
               />
@@ -758,14 +758,14 @@ const HowItWorks = () => {
                 fill="white"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M116.138 161.244C116.565 158.817 118.879 157.198 121.305 157.625L146.794 162.12C150.276 162.734 153.424 164.351 155.655 166.688C157.885 169.023 159.396 172.342 158.748 176.018C158.1 179.694 155.545 182.297 152.651 183.73C149.756 185.164 146.244 185.61 142.76 184.996L82.1967 174.316C79.7705 173.889 78.1505 171.574 78.5783 169.149C79.0061 166.722 81.3197 165.102 83.7459 165.53L144.31 176.209C146.116 176.527 147.671 176.241 148.692 175.736C149.714 175.229 149.924 174.688 149.962 174.469C150 174.252 149.989 173.673 149.203 172.849C148.417 172.025 147.053 171.225 145.245 170.906L119.651 165.503C117.226 165.075 115.709 163.669 116.138 161.244Z"
                 fill="url(#paint11_linear_5385_5902)"
               />
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M165.371 115.831C166.329 113.772 168.552 112.614 170.788 113.008L190.77 116.532C193.499 117.013 195.321 119.614 194.84 122.343C194.358 125.071 191.757 126.893 189.028 126.412L172.839 123.557L163.276 144.085C162.106 146.597 159.122 147.684 156.61 146.514C154.099 145.344 153.011 142.36 154.182 139.849L165.371 115.831Z"
                 fill="url(#paint12_linear_5385_5902)"
               />
@@ -828,8 +828,8 @@ const HowItWorks = () => {
                 width="247.492"
                 height="247.492"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="27" result="effect1_foregroundBlur_5385_5902" />
               </filter>
@@ -840,8 +840,8 @@ const HowItWorks = () => {
                 width="159.803"
                 height="61.6111"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feGaussianBlur stdDeviation="10.3437" result="effect1_foregroundBlur_5385_5902" />
               </filter>
@@ -852,8 +852,8 @@ const HowItWorks = () => {
                 width="62.0681"
                 height="78.8862"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feColorMatrix
                   in="SourceAlpha"
@@ -877,8 +877,8 @@ const HowItWorks = () => {
                 width="65.2626"
                 height="36.3463"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                colorInterpolationFilters="sRGB">
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                 <feColorMatrix
                   in="SourceAlpha"
@@ -902,8 +902,8 @@ const HowItWorks = () => {
                 x2="208.898"
                 y2="53.9327"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_5385_5902"
@@ -912,8 +912,8 @@ const HowItWorks = () => {
                 x2="114.714"
                 y2="182.499"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" stop-opacity="0" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" stopOpacity="0" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_5385_5902"
@@ -922,8 +922,8 @@ const HowItWorks = () => {
                 x2="222.299"
                 y2="83.9693"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint3_linear_5385_5902"
@@ -932,8 +932,8 @@ const HowItWorks = () => {
                 x2="50.6379"
                 y2="217.555"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint4_linear_5385_5902"
@@ -942,8 +942,8 @@ const HowItWorks = () => {
                 x2="208.12"
                 y2="180.633"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <radialGradient
                 id="paint5_radial_5385_5902"
@@ -952,8 +952,8 @@ const HowItWorks = () => {
                 r="1"
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(121.062 205.132) rotate(90) scale(10.1188 59.2142)">
-                <stop stop-color="#2B2B2B" />
-                <stop offset="1" stop-color="#2B2B2B" stop-opacity="0" />
+                <stop stopColor="#2B2B2B" />
+                <stop offset="1" stopColor="#2B2B2B" stopOpacity="0" />
               </radialGradient>
               <linearGradient
                 id="paint6_linear_5385_5902"
@@ -962,8 +962,8 @@ const HowItWorks = () => {
                 x2="136.258"
                 y2="64.6874"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#3B3B3B" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#3B3B3B" />
               </linearGradient>
               <linearGradient
                 id="paint7_linear_5385_5902"
@@ -972,8 +972,8 @@ const HowItWorks = () => {
                 x2="114.978"
                 y2="81.9423"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint8_linear_5385_5902"
@@ -982,8 +982,8 @@ const HowItWorks = () => {
                 x2="119.697"
                 y2="107.886"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint9_linear_5385_5902"
@@ -992,8 +992,8 @@ const HowItWorks = () => {
                 x2="117.321"
                 y2="94.4155"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint10_linear_5385_5902"
@@ -1002,8 +1002,8 @@ const HowItWorks = () => {
                 x2="149.544"
                 y2="59.9061"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#FF6250" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#FF6250" />
               </linearGradient>
               <linearGradient
                 id="paint11_linear_5385_5902"
@@ -1012,8 +1012,8 @@ const HowItWorks = () => {
                 x2="129.343"
                 y2="119.126"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint12_linear_5385_5902"
@@ -1022,8 +1022,8 @@ const HowItWorks = () => {
                 x2="212.9"
                 y2="157.155"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="1" stop-color="#377DF7" />
+                <stop stopColor="#A259FF" />
+                <stop offset="1" stopColor="#377DF7" />
               </linearGradient>
               <linearGradient
                 id="paint13_linear_5385_5902"
@@ -1032,8 +1032,8 @@ const HowItWorks = () => {
                 x2="76.7701"
                 y2="161.794"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint14_linear_5385_5902"
@@ -1042,8 +1042,8 @@ const HowItWorks = () => {
                 x2="95.3243"
                 y2="58.7037"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <linearGradient
                 id="paint15_linear_5385_5902"
@@ -1052,8 +1052,8 @@ const HowItWorks = () => {
                 x2="105.055"
                 y2="186.017"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="white" />
-                <stop offset="1" stop-color="#BCF3FF" />
+                <stop stopColor="white" />
+                <stop offset="1" stopColor="#BCF3FF" />
               </linearGradient>
               <linearGradient
                 id="paint16_linear_5385_5902"
@@ -1062,8 +1062,8 @@ const HowItWorks = () => {
                 x2="167.648"
                 y2="139"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#AFF1FF" />
-                <stop offset="1" stop-color="#65C8DE" />
+                <stop stopColor="#AFF1FF" />
+                <stop offset="1" stopColor="#65C8DE" />
               </linearGradient>
               <linearGradient
                 id="paint17_linear_5385_5902"
@@ -1072,8 +1072,8 @@ const HowItWorks = () => {
                 x2="153.387"
                 y2="108.464"
                 gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A259FF" />
-                <stop offset="0.666667" stop-color="white" />
+                <stop stopColor="#A259FF" />
+                <stop offset="0.666667" stopColor="white" />
               </linearGradient>
               <clipPath id="clip0_5385_5902">
                 <rect width="250" height="250" fill="white" />

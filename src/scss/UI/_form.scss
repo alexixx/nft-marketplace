@@ -58,5 +58,46 @@
       padding-bottom: 12px;
       margin-top: 15px;
     }
+    .link {
+      margin-top: 20px;
+      color: $purple;
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+  &--login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    & label {
+      position: relative;
+      & > input {
+        width: 330px;
+        padding: 12px 52px;
+        color: $dark;
+        border: 1px solid grey;
+        border-radius: $border-radius;
+        background-color: $white;
+      }
+      & > .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        margin: auto;
+      }
+    }
+    button {
+      width: 330px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      margin-top: 15px;
+    }
+    .link {
+      margin-top: 20px;
+      color: $purple;
+      text-align: center;
+      text-decoration: underline;
+    }
   }
 }

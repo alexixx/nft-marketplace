@@ -20,7 +20,12 @@
       display: block;
     }
   }
-  &__button-signup {
+  &__button-login {
+    margin-left: 20px;
+  }
+  &__button-signup,
+  &__button-login,
+  &__button-logout {
     @include mediaTablet {
       display: none !important;
     }

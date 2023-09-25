@@ -1,7 +1,9 @@
 import './scss/app.scss';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { setUserData, setToken } from './redux/slices/userSlice';
 
 import Header from './components/Header';
 import Footer from './components/Footer.jsx';
@@ -17,22 +19,73 @@ import NFT from './pages/NFT';
 import NotFound from './pages/NotFound';
 
 function App() {
+  const dispatch = useDispatch();
+  const [checkUser, setCheckUser] = useState(false);
+
+  const token = useSelector((state) => state.user.token);
+  const userData = useSelector((state) => state.user.data);
+
+  useEffect(() => {
+    // Проверка на наличие данных пользователя в localStorage
+    const localStorageUserData = localStorage.getItem('user');
+    if (localStorageUserData) {
+      const userData = JSON.parse(localStorageUserData);
+      dispatch(setUserData(userData.data));
+      dispatch(setToken(userData.token));
+    }
+    setCheckUser(true);
+  }, []);
+
+  const tokenRefresh = async () => {
+    // Добавить роутер для обновления токена
+    // Отправлять данные, которые на данный момент в redux (id, name, mail)
+    const response = await fetch('/api/token-refresh', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        dispatch(setToken(res.token));
+      });
+  };
+
+  useEffect(() => {
+    // Обновление токена
+    if (token) {
+      const tokenParts = token.split('.');
+      const payload = JSON.parse(atob(tokenParts[1]));
+
+      // Поулчаем дату и время окончания действия токена
+      const exp = payload.exp * 1000;
+
+      setTimeout(() => {
+        // Запускаем таймер и выполняем обновление токена авторизованного пользователя по окончанию действия текущего токена
+        tokenRefresh();
+      }, exp - new Date().getTime());
+    }
+  }, [checkUser]);
+
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/marketplace" element={<Marketplace />} />
-        <Route path="/rankings" element={<Rankings />} />
-        <Route path="/wallet" element={<Wallet />} />
-        <Route path="/user/:name" element={<User />} />
-        <Route path="/user/signup" element={<SignUp />} />
-        <Route path="/user/login" element={<Login />} />
-        <Route path="/nft" element={<NFT />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </>
+    checkUser && (
+      <>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/rankings" element={<Rankings />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/user/:name" element={<User />} />
+          <Route path="/user/signup" element={<SignUp />} />
+          <Route path="/user/login" element={<Login />} />
+          <Route path="/nft" element={<NFT />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </>
+    )
   );
 }
 

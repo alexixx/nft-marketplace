@@ -1,8 +1,10 @@
 * {
   ::selection {
+    color: $white;
     background: $purple; /* Safari */
   }
   ::-moz-selection {
+    color: $white;
     background: $purple; /* Firefox */
   }
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button';
 
 // ICONS
@@ -17,19 +18,15 @@ const SignUp = () => {
 
   useEffect(() => {
     const Registration = async () => {
-      await fetch('/api/user/create', {
+      const response = await fetch('/api/user/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
-      }).then((res) => {
-        if (!res.ok) {
-          throw new Error('Ошибка ввода данных');
-        } else {
-          console.log('Пользователь создан');
-        }
-      });
+      }).then((res) => res.json());
+
+      console.log(response);
     };
     if (formData) Registration();
   }, [formData]);
@@ -122,6 +119,9 @@ const SignUp = () => {
           type: 'submit',
         }}
       />
+      <Link to={'/user/login'} className="link">
+        Already have an account?
+      </Link>
     </form>
   );
 };

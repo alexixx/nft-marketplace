@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <section className="user-portfolio">
       <div className="container">
-        <div className="user-portfolio__wrapper">
+        <div className="user-portfolio__list">
           <CardNFT
             title="Magic Mushroom 0325"
             author="Shroomie"

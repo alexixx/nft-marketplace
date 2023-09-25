@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import UserInfo from '../components/Profile/UserInfo';
 import Portfolio from '../components/Profile/Portfolio';
 
-const index = () => {
+const Index = () => {
+  const { name } = useParams();
+  const token = useSelector((state) => state.user.token);
+
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await fetch(`/api/user/${name}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          token,
+        },
+      }).then((res) => {
+        return res.json();
+      });
+
+      console.log(response);
+      if (!response.error) {
+        setUserData(response);
+      }
+    };
+
+    getUser();
+  }, []);
+
   return (
-    <>
-      <main>
-        <UserInfo />
-        <Portfolio />
-      </main>
-    </>
+    userData && (
+      <>
+        <main>
+          <UserInfo {...userData} />
+          <Portfolio {...userData} />
+        </main>
+      </>
+    )
   );
 };
 
-export default index;
+export default Index;

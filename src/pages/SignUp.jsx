@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import SignUp from '../components/SignUp';
 
-const index = () => {
+const Index = () => {
+  const navigate = useNavigate();
+  const userData = useSelector((state) => state.user.data);
+  useEffect(() => {
+    // Редирект в случае пройденной авторизации
+    if (Object.keys(userData).length != 0) {
+      navigate('/');
+    }
+  }, [userData]);
   return (
     <>
       <main>
@@ -12,4 +22,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

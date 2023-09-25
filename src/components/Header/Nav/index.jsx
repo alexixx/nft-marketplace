@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearUserData, clearToken } from '../../../redux/slices/userSlice';
 import Button from '../../../UI/Button';
 import MobileMenu from '../../MobileMenu.jsx';
 
 import burgerImg from '../../../assets/img/icons/burger.svg';
 
 const Nav = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const userData = useSelector((state) => state.user.data);
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
@@ -17,6 +21,16 @@ const Nav = () => {
       document.body.style.overflowY = 'auto';
     }
   }, [mobileMenu]);
+
+  useEffect(() => {
+    console.log(userData);
+  }, [userData]);
+
+  const LogOut = () => {
+    dispatch(clearUserData());
+    dispatch(clearToken());
+    localStorage.clear();
+  };
 
   return (
     <>
@@ -32,13 +46,25 @@ const Nav = () => {
             <Link to={'/wallet'}>Connect a wallet</Link>
           </li>
         </ul>
-        <Button
-          value="Sign Up"
-          color="purple"
-          icon="user"
-          callback={() => navigate('/user/signup')}
-          customClass="nav__button-signup"
-        />
+        {userData.id ? (
+          <Button
+            value="Log Out"
+            color="white"
+            callback={() => LogOut()}
+            customClass="nav__button-logout"
+          />
+        ) : (
+          <>
+            <Button
+              value="Log In"
+              color="purple"
+              icon="user"
+              callback={() => navigate('/user/login')}
+              customClass="nav__button-signup"
+            />
+          </>
+        )}
+
         <div
           className="nav__button-mobile"
           onClick={() => {
