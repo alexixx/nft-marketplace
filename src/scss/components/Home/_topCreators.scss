@@ -24,6 +24,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 60px;
+    @media (max-width: 1032px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     @include mediaTablet {
       grid-template-columns: repeat(2, 1fr);
     }

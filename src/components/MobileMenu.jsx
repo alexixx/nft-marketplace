@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { clearUserData, clearToken } from '../redux/slices/userSlice';
 import Button from '../UI/Button';
 
 const MobileMenu = ({ mobileMenu, setMobileMenu }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const userData = useSelector((state) => state.user.data);
 
-  const onClickSignUp = () => {
-    navigate('/user/signup');
+  useEffect(() => {
+    console.log(userData);
+  }, []);
+
+  const onClickLogin = () => {
+    navigate('/user/login');
+    setMobileMenu(false);
+  };
+
+  const LogOut = () => {
+    dispatch(clearUserData());
+    dispatch(clearToken());
+    localStorage.clear();
     setMobileMenu(false);
   };
   return (
     <div className="mobile-menu">
-      <Button value="Sign Up" color="white" callback={() => onClickSignUp()} />
+      {userData.id ? (
+        <Button value="Log Out" color="white" callback={() => LogOut()} />
+      ) : (
+        <Button value="Log In" color="white" callback={() => onClickLogin()} />
+      )}
+
       <nav className="mobile-menu__list">
         <Link
           to={'/marketplace'}

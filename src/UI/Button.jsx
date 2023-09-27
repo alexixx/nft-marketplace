@@ -218,7 +218,7 @@ const Button = ({ value, color, size, icon, callback, customClass, attrs }) => {
       {...attrs}
       onClick={callback}>
       {/* {icon && <img src={icon} alt={`icon-${icon}`} className="icon" />} */}
-      {iconSVG ? iconSVG : ''}
+      {icon ? iconSVG : ''}
       <span className="button__title">{value}</span>
       <div className="button__inner"></div>
     </button>

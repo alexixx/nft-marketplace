@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
-const CardNFT = ({ title, author, price, highestBid, imgCard, imgAuthor, theme }) => {
+const CardNFT = ({ title, author, price, highestBid, imgCard, imgAuthor, theme, link }) => {
   const card = useRef();
 
   const [scale, setScale] = useState(1);
@@ -63,6 +64,45 @@ const CardNFT = ({ title, author, price, highestBid, imgCard, imgAuthor, theme }
       card.current.style.transition = 'none';
     }, 300);
   };
+
+  if (link) {
+    return (
+      <Link to={link} class={`card ${theme ? `theme--${theme}` : ''}`} ref={card}>
+        <div className="card__image-wrapper">
+          <img src={imgCard} alt="discover" class="card__image" />
+        </div>
+
+        <div class={`card__info`}>
+          <p class="card__name">{title}</p>
+          <div class="card__artist">
+            <img src={imgAuthor} alt="author" class="card__avatar" />
+            <p class="card__author">{author}</p>
+          </div>
+          <div class="card__meta">
+            <div>
+              <p class="title">Price</p>
+              <p class="value">{price} ETH</p>
+            </div>
+            <div>
+              <p class="title">Highest Bid</p>
+              <p class="value">{highestBid} wETH</p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="card__inner"
+          //   onMouseEnter={(e) => {
+          //     onMouseEnter(e);
+          //   }}
+          onMouseMove={(e) => {
+            onCardMove(e);
+          }}
+          onMouseOut={(e) => {
+            onCardOut(e);
+          }}></div>
+      </Link>
+    );
+  }
   return (
     <div class={`card ${theme ? `theme--${theme}` : ''}`} ref={card}>
       <div className="card__image-wrapper">

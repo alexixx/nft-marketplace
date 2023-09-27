@@ -37,9 +37,7 @@ function App() {
   }, []);
 
   const tokenRefresh = async () => {
-    // Добавить роутер для обновления токена
-    // Отправлять данные, которые на данный момент в redux (id, name, mail)
-    const response = await fetch('/api/token-refresh', {
+    await fetch('/api/token-refresh', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -48,7 +46,17 @@ function App() {
     })
       .then((res) => res.json())
       .then((res) => {
+        // Обновляем токен в redux
         dispatch(setToken(res.token));
+
+        // Обновляем токен в localStorage
+        localStorage.setItem(
+          'user',
+          JSON.stringify({
+            data: userData,
+            token: res.token,
+          }),
+        );
       });
   };
 
@@ -61,7 +69,10 @@ function App() {
       // Поулчаем дату и время окончания действия токена
       const exp = payload.exp * 1000;
 
+      console.log('Срок действия токена: ', new Date(exp));
+
       setTimeout(() => {
+        console.log('Обновление токена');
         // Запускаем таймер и выполняем обновление токена авторизованного пользователя по окончанию действия текущего токена
         tokenRefresh();
       }, exp - new Date().getTime());
@@ -80,7 +91,7 @@ function App() {
           <Route path="/user/:name" element={<User />} />
           <Route path="/user/signup" element={<SignUp />} />
           <Route path="/user/login" element={<Login />} />
-          <Route path="/nft" element={<NFT />} />
+          <Route path="/nft/:id" element={<NFT />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

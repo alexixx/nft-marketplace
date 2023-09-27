@@ -47,12 +47,18 @@ const Nav = () => {
           </li>
         </ul>
         {userData.id ? (
-          <Button
-            value="Log Out"
-            color="white"
-            callback={() => LogOut()}
-            customClass="nav__button-logout"
-          />
+          <>
+            <Button
+              value="Log Out"
+              color="white"
+              callback={() => LogOut()}
+              customClass="nav__button-logout"
+            />
+            <Link
+              to={'/user/alexey'}
+              className="nav__avatar"
+              style={{ backgroundImage: `url(${userData.avatar})` }}></Link>
+          </>
         ) : (
           <>
             <Button

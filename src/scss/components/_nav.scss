@@ -12,6 +12,17 @@
   &__item {
     white-space: nowrap;
   }
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    margin-left: 20px;
+    border-radius: 50px;
+    @include bgDefault;
+    @include mediaTablet {
+      display: none;
+    }
+  }
   &__button-mobile {
     z-index: 9999;
     display: none;

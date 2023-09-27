@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import wallpaperImg from '../../assets/img/content/profile/wallpaper.png';
@@ -16,7 +16,7 @@ import plusIcon from '../../assets/img/icons/plus.svg';
 import Button from '../../UI/Button';
 import Tabs from '../../UI/Tabs';
 
-const UserInfo = ({ name, owner }) => {
+const UserInfo = ({ username, surname, owner, avatar }) => {
   return (
     <>
       <section className="user">
@@ -24,7 +24,7 @@ const UserInfo = ({ name, owner }) => {
         <div className="container">
           <div className="user__wrapper">
             <div className="user__row">
-              <div className="user__title">{name}</div>
+              <div className="user__title">{username}</div>
               <div className="user__button-wrapper">
                 {!owner && (
                   <>
@@ -67,7 +67,7 @@ const UserInfo = ({ name, owner }) => {
                 </a>
               </div>
             </div>
-            <img src={authorImg} alt="author" className="user__avatar" />
+            <img src={avatar} alt="author" className="user__avatar" />
           </div>
         </div>
       </section>

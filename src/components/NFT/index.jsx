@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 import contentImg from '../../assets/img/content/NFT/content.png';
 import authorImg from '../../assets/img/content/home/author.png';
@@ -6,20 +8,27 @@ import globeIcon from '../../assets/img/icons/globe.svg';
 
 import Timer from '../../UI/Timer';
 
-const NFT = () => {
+const NFT = ({ name, created, image, username, avatar }) => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   return (
     <section className="nft">
-      <div className="nft__wallpaper" style={{ backgroundImage: `url(${contentImg})` }}></div>
+      <div className="nft__wallpaper" style={{ backgroundImage: `url(${image})` }}></div>
       <div className="container">
         <div className="nft__wrapper">
           <div className="nft__column">
-            <h2 className="nft__title">The Orbitians</h2>
-            <div className="nft__date">Minted on Sep 30, 2022</div>
+            <h2 className="nft__title">{name}</h2>
+            <div className="nft__date">Minted on {moment(created).format('MMM DD, YYYY')}</div>
             <p className="nft__subtitle">Created By</p>
-            <div className="nft__artist">
-              <img src={authorImg} alt="author" className="avatar" />
-              Orbitian
-            </div>
+            <Link to={`/user/${username}`} className="nft__artist">
+              <img src={avatar} alt="author" className="avatar" />
+              {username}
+            </Link>
             <p className="nft__subtitle">Description</p>
             <div className="nft__desc">
               <p>The Orbitians is a collection of 10,000 unique NFTs on the Ethereum blockchain,</p>
