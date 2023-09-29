@@ -32,6 +32,14 @@ const Index = () => {
     getUser();
   }, []);
 
+  useEffect(() => {
+    if (!token) {
+      let obj = { ...userData };
+      delete obj.owner;
+      setUserData({ ...obj });
+    }
+  }, [token]);
+
   return (
     userData && (
       <>
