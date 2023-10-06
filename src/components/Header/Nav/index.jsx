@@ -37,7 +37,7 @@ const Nav = () => {
       <nav className="nav">
         <ul className="nav__list">
           <li className="nav__item">
-            <Link to={'/marketplace'}>Marketplace</Link>
+            <Link to={'/browse'}>Marketplace</Link>
           </li>
           <li className="nav__item">
             <Link to={'/rankings'}>Rankings</Link>

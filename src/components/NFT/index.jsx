@@ -9,13 +9,6 @@ import globeIcon from '../../assets/img/icons/globe.svg';
 import Timer from '../../UI/Timer';
 
 const NFT = ({ name, created, image, username, avatar }) => {
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }, []);
-
   return (
     <section className="nft">
       <div className="nft__wallpaper" style={{ backgroundImage: `url(${image})` }}></div>

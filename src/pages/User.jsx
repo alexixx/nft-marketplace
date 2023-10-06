@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import useGetUserOne from '../hooks/useGetUserOne';
 
 import UserInfo from '../components/Profile/UserInfo';
 import Portfolio from '../components/Profile/Portfolio';
@@ -9,28 +10,30 @@ const Index = () => {
   const { name } = useParams();
   const token = useSelector((state) => state.user.token);
 
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useGetUserOne(name, token);
 
-  useEffect(() => {
-    const getUser = async () => {
-      const response = await fetch(`/api/user/${name}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          token,
-        },
-      }).then((res) => {
-        return res.json();
-      });
+  //   const [userData, setUserData] = useState(null);
 
-      console.log(response);
-      if (!response.error) {
-        setUserData(response);
-      }
-    };
+  //   useEffect(() => {
+  //     const getUser = async () => {
+  //       const response = await fetch(`/api/user/${name}`, {
+  //         method: 'GET',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //           token,
+  //         },
+  //       }).then((res) => {
+  //         return res.json();
+  //       });
 
-    getUser();
-  }, []);
+  //       console.log(response);
+  //       if (!response.error) {
+  //         setUserData(response);
+  //       }
+  //     };
+
+  //     getUser();
+  //   }, []);
 
   useEffect(() => {
     if (!token) {

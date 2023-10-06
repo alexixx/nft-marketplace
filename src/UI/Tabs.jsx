@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setTab } from '../redux/slices/mainSlice';
 
 const Tabs = ({ values, activeTabDefault }) => {
+  const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState(0);
 
   useEffect(() => {
     setActiveTab(activeTabDefault);
+    dispatch(setTab(values[activeTabDefault].title));
   }, []);
 
-  const onClickTab = (id) => {
+  const onClickTab = (id, title) => {
     setActiveTab(id);
+    // Записываем выбранное значение глобального таба
+    dispatch(setTab(title));
   };
 
   return (
@@ -17,19 +23,11 @@ const Tabs = ({ values, activeTabDefault }) => {
         {values.map((item) => (
           <div
             className={`tabs__item ${activeTab == item.id ? 'active' : ''}`}
-            onClick={() => onClickTab(item.id)}>
+            onClick={() => onClickTab(item.id, item.title)}>
             {item.title}
             {item.counter ? <div className="tabs__counter">{item.counter}</div> : ''}
           </div>
         ))}
-        {/* <div className="tabs__item active">
-          NFTs
-          <div className="tabs__counter">302</div>
-        </div>
-        <div className="tabs__item">
-          Collections
-          <div className="tabs__counter">67</div>
-        </div> */}
       </div>
     </div>
   );

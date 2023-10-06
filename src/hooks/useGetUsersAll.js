@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 
-const useGetUserOne = (name, token) => {
-  const [userData, setUserData] = useState(null);
+const useGetUsersAll = (limit) => {
+  const [usersList, setUsersList] = useState(null);
 
   useEffect(() => {
-    const getUser = async () => {
+    const getUsersAll = async () => {
       try {
-        const response = await fetch(`/api/users/${name}`, {
+        const response = await fetch(`/api/users/?limit=${limit}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            token,
           },
         });
 
@@ -19,17 +18,18 @@ const useGetUserOne = (name, token) => {
         }
 
         const data = await response.json();
-        setUserData(data);
+
+        setUsersList(data);
       } catch (error) {
         console.error('Error fetching user data:', error);
-        setUserData(null);
+        setUsersList(null);
       }
     };
 
-    getUser();
-  }, [name, token]);
+    getUsersAll();
+  }, [limit]);
 
-  return [userData, setUserData];
+  return usersList;
 };
 
-export default useGetUserOne;
+export default useGetUsersAll;

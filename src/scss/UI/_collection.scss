@@ -1,0 +1,55 @@
+.collection {
+  @include mediaTablet {
+    &:last-child {
+      display: none;
+    }
+  }
+  @include mediaMobile {
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template: 1fr 100px / repeat(3, 1fr);
+    gap: 13px;
+    margin-bottom: 15px;
+    @include mediaTablet {
+      grid-template: 1fr auto / repeat(3, 1fr);
+    }
+    & > * {
+      border-radius: $border-radius;
+      &:first-child {
+        grid-column: 1 / span 3;
+        width: 100%;
+      }
+      &:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 20px;
+        font-family: 'Space Mono';
+        font-weight: 600;
+        background-color: $purple;
+      }
+    }
+  }
+  &__name {
+    font-size: $font-size-large;
+    margin-bottom: 10px;
+  }
+  &__artist {
+    display: flex;
+    align-items: center;
+    & .avatar {
+      width: 24px;
+      border-radius: 125px;
+    }
+    & .author {
+      margin-left: 12px;
+    }
+  }
+}

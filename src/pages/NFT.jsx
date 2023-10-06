@@ -1,37 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import useGetNftOne from '../hooks/useGetNftOne';
 
 import NFT from '../components/NFT/';
 import Portfolio from '../components/NFT/Portfolio.jsx';
 
 const Index = () => {
   const { id } = useParams();
-
-  const [NFTData, setNFTData] = useState(null);
+  const NFTData = useGetNftOne(id);
 
   useEffect(() => {
-    const getNFT = async () => {
-      const response = await fetch(`/api/nft/${id}`, {
-        method: 'GET',
-      }).then((res) => {
-        return res.json();
-      });
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant',
+    });
+  }, [id]);
 
-      console.log(response);
-      if (!response.error) {
-        setNFTData(response);
-      }
-    };
+  //   useEffect(() => {
+  //     const getNFT = async () => {
+  //       const response = await fetch(`/api/nft/${id}`, {
+  //         method: 'GET',
+  //       }).then((res) => {
+  //         return res.json();
+  //       });
 
-    getNFT();
-  }, []);
+  //       console.log(response);
+  //       if (!response.error) {
+  //         setNFTData(response);
+  //       }
+  //     };
+
+  //     getNFT();
+  //   }, []);
 
   return (
     <>
-      <main>
-        <NFT {...NFTData} />
-        <Portfolio {...NFTData} />
-      </main>
+      {NFTData && (
+        <main>
+          <NFT {...NFTData} />
+          <Portfolio {...NFTData} />
+        </main>
+      )}
     </>
   );
 };

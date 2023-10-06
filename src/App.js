@@ -9,7 +9,7 @@ import Header from './components/Header';
 import Footer from './components/Footer.jsx';
 
 import Home from './pages/Home';
-import Marketplace from './pages/Marketplace';
+import Browse from './pages/Browse';
 import Rankings from './pages/Rankings';
 import Wallet from './pages/Wallet';
 import SignUp from './pages/SignUp';
@@ -85,7 +85,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/browse" element={<Browse />} />
           <Route path="/rankings" element={<Rankings />} />
           <Route path="/wallet" element={<Wallet />} />
           <Route path="/user/:name" element={<User />} />
