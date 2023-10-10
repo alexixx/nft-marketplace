@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import authorImg from '../../assets/img/content/home/author.png';
 
-const Result = () => {
+const Result = ({ usersData }) => {
   return (
     <section className="rankings-result">
       <div className="rankings-result__list">
@@ -13,42 +14,25 @@ const Result = () => {
           <div className="sold">NFTs Sold</div>
           <div className="volume">Volume</div>
         </div>
-        <div className="rankings-result__item">
-          <div className="number">
-            <span>1</span>
-          </div>
-          <div className="artist">
-            <img src={authorImg} alt="author" className="authorImg" />
-            <span>Jaydon Ekstrom Bothman</span>
-          </div>
-          <div className="change">+1.41%</div>
-          <div className="sold">602</div>
-          <div className="volume">12.4 ETH</div>
-        </div>
-        <div className="rankings-result__item">
-          <div className="number">
-            <span>2</span>
-          </div>
-          <div className="artist">
-            <img src={authorImg} alt="author" className="authorImg" />
-            <span>Jaydon Ekstrom Bothman</span>
-          </div>
-          <div className="change">+1.41%</div>
-          <div className="sold">602</div>
-          <div className="volume">12.4 ETH</div>
-        </div>
-        <div className="rankings-result__item">
-          <div className="number">
-            <span>3</span>
-          </div>
-          <div className="artist">
-            <img src={authorImg} alt="author" className="authorImg" />
-            <span>Jaydon Ekstrom Bothman</span>
-          </div>
-          <div className="change">+1.41%</div>
-          <div className="sold">602</div>
-          <div className="volume">12.4 ETH</div>
-        </div>
+
+        {usersData &&
+          usersData.map((item, index) => (
+            <Link
+              key={item.username + item.surname}
+              to={`/user/${item.username}`}
+              className="rankings-result__item">
+              <div className="number">
+                <span>{index + 1}</span>
+              </div>
+              <div className="artist">
+                <img src={item.avatar} alt="author" className="authorImg" />
+                <span>{`${item.username} ${item.surname}`}</span>
+              </div>
+              <div className="change">+1.41%</div>
+              <div className="sold">602</div>
+              <div className="volume">12.4 ETH</div>
+            </Link>
+          ))}
       </div>
     </section>
   );
