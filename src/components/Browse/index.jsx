@@ -11,6 +11,7 @@ const Browse = ({ setDataSearch }) => {
   const dispatch = useDispatch();
   const inputSearch = useRef();
   const [searchValue, setSearchValue] = useState('');
+  const [countOfResult, setCountOfResult] = useState({});
 
   const searchGlobal = useSelector((state) => state.main.search);
   const tabGlobal = useSelector((state) => state.main.tab);
@@ -28,6 +29,23 @@ const Browse = ({ setDataSearch }) => {
   );
 
   useEffect(() => {
+    const getAll = async () => {
+      const response = await fetch(`/api/search/?name=${searchGlobal}`).then((res) => res.json());
+      if (response && response.length) {
+        let nftCount = response.filter((item) => item.source == 'nft');
+        let collectionsCount = response.filter((item) => item.source == 'collections');
+
+        setCountOfResult({
+          nft: nftCount.length,
+          collections: collectionsCount.length,
+        });
+      } else {
+        setCountOfResult({
+          nft: 0,
+          collections: 0,
+        });
+      }
+    };
     const getNft = async () => {
       const response = await fetch(
         `/api/search/nft?name=${searchGlobal}&description=${searchGlobal}`,
@@ -68,9 +86,11 @@ const Browse = ({ setDataSearch }) => {
     if (searchGlobal) {
       switch (tabGlobal) {
         case 'NFTs':
+          getAll();
           getNft();
           break;
         case 'Collections':
+          getAll();
           getCollections();
           break;
 
@@ -79,6 +99,10 @@ const Browse = ({ setDataSearch }) => {
       }
     } else {
       setDataSearch([]);
+      setCountOfResult({
+        nft: 0,
+        collections: 0,
+      });
     }
   }, [searchGlobal, tabGlobal]);
 
@@ -115,12 +139,12 @@ const Browse = ({ setDataSearch }) => {
             {
               id: 0,
               title: 'NFTs',
-              counter: 302,
+              counter: countOfResult.nft,
             },
             {
               id: 1,
               title: 'Collections',
-              counter: 67,
+              counter: countOfResult.collections,
             },
           ]}
           activeTabDefault={0}

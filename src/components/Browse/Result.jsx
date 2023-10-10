@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import CardNFT from '../../UI/CardNFT';
 import Collection from '../../UI/Collection';
 
-const Result = ({ dataSearch }) => {
+const Result = ({ setDataSearch, dataSearch }) => {
   const tabGlobal = useSelector((state) => state.main.tab);
 
   const renderItems = () => {
@@ -16,6 +16,7 @@ const Result = ({ dataSearch }) => {
           dataSearch &&
           dataSearch.map((item) => (
             <CardNFT
+              key={item.created}
               title={item.name}
               author={item.username}
               price="1.63"
@@ -30,25 +31,26 @@ const Result = ({ dataSearch }) => {
 
         break;
       case `Collections`:
-        let collections = [];
-        for (let key in dataSearch) {
-          collections.push(
-            <Collection
-              name={dataSearch[key].name}
-              nft={dataSearch[key].images}
-              avatar={dataSearch[key].avatar}
-              username={dataSearch[key].username}
-            />,
-          );
-        }
+        if (Array.isArray(dataSearch)) return; // !
+        const keys = Object.keys(dataSearch);
+        console.log('🚀 ~ file: Result.jsx:33 ~ renderItems ~ dataSearch:', dataSearch);
 
-        return collections;
+        return keys.map((item) => (
+          <Collection
+            key={dataSearch[item].name + item}
+            name={dataSearch[item].name}
+            nft={dataSearch[item].images}
+            avatar={dataSearch[item].avatar}
+            username={dataSearch[item].username}
+          />
+        ));
         break;
 
       default:
         break;
     }
   };
+
   return (
     <section className="browse-result">
       <div className="container">

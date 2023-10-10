@@ -16,6 +16,7 @@
     grid-template: 1fr 100px / repeat(3, 1fr);
     gap: 13px;
     margin-bottom: 15px;
+
     @include mediaTablet {
       grid-template: 1fr auto / repeat(3, 1fr);
     }
@@ -35,6 +36,9 @@
         font-weight: 600;
         background-color: $purple;
       }
+    }
+    & .empty {
+      background-color: $dark;
     }
   }
   &__name {

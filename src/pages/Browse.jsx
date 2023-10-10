@@ -11,12 +11,16 @@ const Index = () => {
       top: 0,
       behavior: 'instant',
     });
+    return () => {
+      setDataSearch([]);
+    };
   }, []);
+
   return (
     <>
       <main>
         <Browse setDataSearch={setDataSearch} />
-        <Result dataSearch={dataSearch} />
+        <Result setDataSearch={setDataSearch} dataSearch={dataSearch} />
       </main>
     </>
   );

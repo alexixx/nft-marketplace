@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setTab } from '../redux/slices/mainSlice';
 
 const Tabs = ({ values, activeTabDefault }) => {
+  console.log(values.counter);
   const dispatch = useDispatch();
   const [activeTab, setActiveTab] = useState(0);
 
@@ -25,7 +26,7 @@ const Tabs = ({ values, activeTabDefault }) => {
             className={`tabs__item ${activeTab == item.id ? 'active' : ''}`}
             onClick={() => onClickTab(item.id, item.title)}>
             {item.title}
-            {item.counter ? <div className="tabs__counter">{item.counter}</div> : ''}
+            <div className="tabs__counter">{item.counter}</div>
           </div>
         ))}
       </div>
